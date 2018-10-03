@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600");
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 100%;
+  font-weight: 400; }
+
+.home {
+  background-image: url("../images/background-home.png"); }
+  .home .row {
+    padding-left: 10%;
+    padding-right: 10%; }
+  .home .threebyseven {
+    min-height: calc( (100vh / 7) * 3 ); }
+  .home .twobyseven {
+    min-height: calc( (100vh / 7) * 2 ); }
+  .home .logo-block {
+    display: block; }
+  .home h1 {
+    font-size: 245%;
+    font-weight: 300; }
+    .home h1 strong {
+      font-size: 125%;
+      font-weight: 400; }
+  .home .btn {
+    background-image: url("../images/background-btn.png");
+    max-height: 80px;
+    width: 100%;
+    text-align: left;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: white; }
+    .home .btn img {
+      display: inline-block;
+      max-width: 40px; }
+    .home .btn h6 {
+      display: inline-block;
+      margin-left: 5%;
+      font-size: 140%;
+      margin-top: 15px;
+      margin-bottom: 0px; }
+
+/*# sourceMappingURL=style.css.map */

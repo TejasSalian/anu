@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 43.6 56">
+  <defs>
+    <style>
+      .a, .b {
+        fill: none;
+        stroke: #fff;
+        stroke-miterlimit: 10;
+      }
+
+      .a {
+        stroke-width: 0.87px;
+      }
+
+      .c {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <title>timeline</title>
+  <g>
+    <line class="a" x1="0.44" x2="0.44" y2="56"/>
+    <line class="b" x1="0.44" y1="28" x2="43.6" y2="28"/>
+    <line class="b" x1="0.44" y1="8" x2="43.6" y2="8"/>
+    <line class="b" x1="0.44" y1="48" x2="43.6" y2="48"/>
+    <rect class="c" x="11.02" y="3.21" width="9.58" height="9.58" rx="1.37" ry="1.37" transform="translate(-1.03 13.52) rotate(-45)"/>
+    <rect class="c" x="29.02" y="23.21" width="9.58" height="9.58" rx="1.37" ry="1.37" transform="translate(-9.9 32.11) rotate(-45)"/>
+    <rect class="c" x="4.82" y="43.21" width="9.58" height="9.58" rx="1.37" ry="1.37" transform="translate(-31.13 20.85) rotate(-45)"/>
+  </g>
+</svg>

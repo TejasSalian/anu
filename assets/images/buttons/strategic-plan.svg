@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48.4 62.77">
+  <defs>
+    <style>
+      .a, .c {
+        fill: none;
+        stroke: #fff;
+      }
+
+      .a {
+        stroke-miterlimit: 10;
+        stroke-width: 0.75px;
+      }
+
+      .b {
+        fill: #fff;
+      }
+
+      .c {
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+    </style>
+  </defs>
+  <title>strategic-plan</title>
+  <g>
+    <g>
+      <path class="a" d="M2.87.38A2.5,2.5,0,0,0,.38,2.87V53.34a2.5,2.5,0,0,0,2.49,2.49H37.61a2.51,2.51,0,0,0,2.5-2.49V8.57L31.92.38Z"/>
+      <g>
+        <rect class="b" x="5.6" y="7.35" width="19.44" height="2.24"/>
+        <rect class="b" x="5.6" y="14.56" width="29.28" height="2.24"/>
+      </g>
+      <path class="b" d="M34.4,8.57h5.71L31.92.38V6.07A2.49,2.49,0,0,0,34.4,8.57Z"/>
+    </g>
+    <g>
+      <g>
+        <polyline class="c" points="21.48 28.7 12.58 28.7 12.58 39.7 15.22 39.7"/>
+        <polyline class="c" points="12.58 36.92 12.58 49.78 15.28 49.78"/>
+        <polyline class="c" points="20.3 24.26 20.3 28.7 30.63 28.7 30.63 31.6"/>
+      </g>
+      <rect class="b" x="24.81" y="31.31" width="11.28" height="4.14" rx="0.3" ry="0.3"/>
+      <g>
+        <rect class="b" x="16.1" y="38.87" width="12.08" height="1.67" rx="0.2" ry="0.2"/>
+        <rect class="b" x="16.1" y="41.31" width="6.78" height="0.64" rx="0.09" ry="0.09"/>
+      </g>
+      <g>
+        <rect class="b" x="16.1" y="51.3" width="6.78" height="0.64" rx="0.09" ry="0.09"/>
+        <rect class="b" x="16.1" y="48.86" width="12.08" height="1.67" rx="0.2" ry="0.2"/>
+      </g>
+      <path class="b" d="M14.52,20.94h11a.3.3,0,0,1,.3.3v3.53a.31.31,0,0,1-.31.31h-11a.31.31,0,0,1-.31-.31V21.25A.31.31,0,0,1,14.52,20.94Z"/>
+    </g>
+    <polygon class="b" points="31.84 60.76 26.92 62.77 26.92 57.45 31.84 60.76"/>
+    <rect class="b" x="24.57" y="45.21" width="24.28" height="6" transform="translate(-23.78 51.75) rotate(-56.06)"/>
+    <path class="b" d="M46.66,38.75l1.5-2.24a1.38,1.38,0,0,0-.36-1.93l-2.65-1.77a1.38,1.38,0,0,0-1.92.37l-1.52,2.24Z"/>
+  </g>
+</svg>
