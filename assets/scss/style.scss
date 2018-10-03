@@ -1,3 +1,4 @@
+@import 'mixins';
 $img : '../images/';
 
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600');
@@ -32,7 +33,7 @@ body{
     }
   }
   .btn{
-    background-image: url($img + 'background-btn.png');
+    @include btn-gradient();
     max-height: 80px;
     width: 100%;
     text-align: left;
@@ -53,4 +54,8 @@ body{
       margin-bottom: 0px;
     }
   }
+}
+
+.navbar{
+  @include menu-gradient();
 }
