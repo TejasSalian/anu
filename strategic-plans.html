@@ -1,60 +1,713 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./assets/css/style.css">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./assets/css/animate.css">
+  <link rel="stylesheet" href="./assets/css/font-awesome-all.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
 
-    <title>Strategic Plans - Australian National University</title>
-  </head>
-  <body>
+  <title>Strategic Plans - Australian National University</title>
+</head>
+<body>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <div class="container">
-        <a class="navbar-brand" href="#">
-          <img src="./assets/images/home.png" alt="ANU Home">
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Dropdown
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">Action</a>
-                <a class="dropdown-item" href="#">Another action</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Something else here</a>
-              </div>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link disabled" href="#">Disabled</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-
+  <nav class="fixed-top navbar">
     <div class="container-fluid">
       <div class="row">
+        <div class="col-12">
+          <div class="oneBySeven">
+            <a class="navbar-brand" href="#">
+              <img src="./assets/images/home.png" alt="ANU Home">
+            </a>
+          </div>
+          <div class="fiveBySeven">
+            <ul class="d-flex justify-content-around">
+              <li class="nav-item active">
+                <a class="nav-link" href="#">Strategic Planning <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">ANU Org. Structure</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Timeline</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Planning Cycle</a>
+              </li>
+            </ul>
 
+          </div>
+          <div class="oneBySeven">
+            <div class="d-inline-block hierarchy">
+              <img src="./assets/images/hierarchy.png" alt="ANU Hierarchy">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container" role="main" id="strategic-plans">
+
+    <div class="row strategic-plans-summary">
+      <div class="col-10">
+        <h1>we have <span>8</span> strategic goals and <span>31</span> key initiatives associated with them</h1>
+      </div>
+      <div class="col-2">
+        <div class="switch-purple">
+          <span>KIs</span>
+          <label class="switch">
+            <input type="checkbox">
+            <span class="slider round"></span>
+          </label>
+          <span>KPIs</span>
+        </div>
+      </div>
+      <div class="col-12 mt-3 mb-3">
+        Graph Here
+      </div>
+    </div>
+    <div class="row strategic-goals">
+      <div class="col-12">
+        <h2>Select a Strategic Goal to view related key initiatives</h2>
+        <div class="accordion goals" id="strategic-goals-group">
+          <div class="card">
+            <div class="card-header" id="collapse-1-head">
+              <h5 class="mb-0" data-toggle="collapse" data-target="#collapse-1" aria-expanded="false" aria-controls="collapse-1">
+                <div class="name-group">
+                  <div class="goal-number">SG-1</div>
+                  <div class="goal-name">Building on a culture of Accademic Excellence</div>
+                </div>
+                <div class="status-group">
+                  <div class="goal-stage">
+                    <span class="good"></span>Within Tolerance
+                  </div>
+                  <div class="collapse-state">
+                    <i class="fas fa-caret-right"></i>
+                  </div>
+                </div>
+              </h5>
+            </div>
+            <div id="collapse-1" class="collapse" aria-labelledby="collapse-1-head" data-parent="#strategic-goals-group">
+              <div class="card-body">
+                <ul>
+                  <li>
+                    <div class="number"><span>ANU-1</span></div>
+                    <div class="name">We will lead the nation in the recruitment, retention, mentoring, management and development of academic and professional staff.</div>
+                    <div class="state">
+                      <span class="good"></span>
+                    </div>
+                    <div class="arrow up">
+                      <i class="fas fa-arrow-up"></i>
+                    </div>
+                    <div class="status">Trending</div>
+                    <div class="link">
+                      <a href="#">View More</a>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="number"><span>ANU-2</span></div>
+                    <div class="name">We will develop and apply performance standards for staff that are commensurate with the world's great universities.</div>
+                    <div class="state">
+                      <span class="info"></span>
+                    </div>
+                    <div class="arrow bi-directional">
+                      <i class="fas fa-arrows-alt-h"></i>
+                    </div>
+                    <div class="status">Trending</div>
+                    <div class="link">
+                      <a href="#">View More</a>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="number"><span>ANU-3</span></div>
+                    <div class="name">We will provide substantial start-up grants for high-potential early and mid-career researchers, enabling us to compete against any institution in the world. At least 50 per cent of this support will be allocated to women.</div>
+                    <div class="state">
+                      <span class="danger"></span>
+                    </div>
+                    <div class="arrow up">
+                      <i class="fas fa-arrow-up"></i>
+                    </div>
+                    <div class="status">Trending</div>
+                    <div class="link">
+                      <a href="#">View More</a>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="number"><span>ANU-4</span></div>
+                    <div class="name">We will maintain the most demanding student entry standards in the nation, commensurate with the world’s great universities.</div>
+                    <div class="state">
+                      <span class="info"></span>
+                    </div>
+                    <div class="arrow down">
+                      <i class="fas fa-arrow-down"></i>
+                    </div>
+                    <div class="status">Trending</div>
+                    <div class="link">
+                      <a href="#">View More</a>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="number"><span>ANU-5</span></div>
+                    <div class="name">We will invest over the course of the Plan in five globally-significant research challenges that deliver solutions to national priorities,  and ensure core disciplines and research strengths are ranked alongside the best in the world.</div>
+                    <div class="state">
+                      <span class="not-available"></span>
+                    </div>
+                    <div class="arrow up">
+                      <i class="fas fa-arrow-up"></i>
+                    </div>
+                    <div class="status">Trending</div>
+                    <div class="link">
+                      <a href="#">View More</a>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="collapse-2-head">
+              <h5 class="mb-0" data-toggle="collapse" data-target="#collapse-2" aria-expanded="false" aria-controls="collapse-2">
+                <div class="name-group">
+                  <div class="goal-number">SG-2</div>
+                  <div class="goal-name">Delivering on our Unique National Responsabilieies</div>
+                </div>
+                <div class="status-group">
+                  <div class="goal-stage">
+                    <span class="warning"></span>Approching Tolerance
+                  </div>
+                  <div class="collapse-state">
+                    <i class="fas fa-caret-right"></i>
+                  </div>
+                </div>
+              </h5>
+            </div>
+            <div id="collapse-2" class="collapse" aria-labelledby="collapse-2-head" data-parent="#strategic-goals-group">
+              <div class="card-body">
+                <ul>
+                  <li>
+                    <div class="number"><span>ANU-1</span></div>
+                    <div class="name">We will lead the nation in the recruitment, retention, mentoring, management and development of academic and professional staff.</div>
+                    <div class="state">
+                      <span class="good"></span>
+                    </div>
+                    <div class="arrow up">
+                      <i class="fas fa-arrow-up"></i>
+                    </div>
+                    <div class="status">Trending</div>
+                    <div class="link">
+                      <a href="#">View More</a>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="number"><span>ANU-2</span></div>
+                    <div class="name">We will develop and apply performance standards for staff that are commensurate with the world's great universities.</div>
+                    <div class="state">
+                      <span class="info"></span>
+                    </div>
+                    <div class="arrow bi-directional">
+                      <i class="fas fa-arrows-alt-h"></i>
+                    </div>
+                    <div class="status">Trending</div>
+                    <div class="link">
+                      <a href="#">View More</a>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="number"><span>ANU-3</span></div>
+                    <div class="name">We will provide substantial start-up grants for high-potential early and mid-career researchers, enabling us to compete against any institution in the world. At least 50 per cent of this support will be allocated to women.</div>
+                    <div class="state">
+                      <span class="danger"></span>
+                    </div>
+                    <div class="arrow up">
+                      <i class="fas fa-arrow-up"></i>
+                    </div>
+                    <div class="status">Trending</div>
+                    <div class="link">
+                      <a href="#">View More</a>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="number"><span>ANU-4</span></div>
+                    <div class="name">We will maintain the most demanding student entry standards in the nation, commensurate with the world’s great universities.</div>
+                    <div class="state">
+                      <span class="info"></span>
+                    </div>
+                    <div class="arrow down">
+                      <i class="fas fa-arrow-down"></i>
+                    </div>
+                    <div class="status">Trending</div>
+                    <div class="link">
+                      <a href="#">View More</a>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="number"><span>ANU-5</span></div>
+                    <div class="name">We will invest over the course of the Plan in five globally-significant research challenges that deliver solutions to national priorities,  and ensure core disciplines and research strengths are ranked alongside the best in the world.</div>
+                    <div class="state">
+                      <span class="not-available"></span>
+                    </div>
+                    <div class="arrow up">
+                      <i class="fas fa-arrow-up"></i>
+                    </div>
+                    <div class="status">Trending</div>
+                    <div class="link">
+                      <a href="#">View More</a>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="collapse-3-head">
+              <h5 class="mb-0"
+              data-toggle="collapse" data-target="#collapse-3"
+              aria-expanded="false" aria-controls="collapse-3">
+                <div class="name-group">
+                  <div class="goal-number">SG-3</div>
+                  <div class="goal-name">Achiving Equity - Within ANU and in society</div>
+                </div>
+                <div class="status-group">
+                  <div class="goal-stage">
+                    <span class="good"></span>Within Tolerance
+                  </div>
+                  <div class="collapse-state">
+                    <i class="fas fa-caret-right"></i>
+                  </div>
+                </div>
+              </h5>
+            </div>
+            <div id="collapse-3" class="collapse" aria-labelledby="collapse-3-head" data-parent="#strategic-goals-group">
+              <div class="card-body">
+                <ul>
+                  <li>
+                    <div class="number"><span>ANU-1</span></div>
+                    <div class="name">We will lead the nation in the recruitment, retention, mentoring, management and development of academic and professional staff.</div>
+                    <div class="state">
+                      <span class="good"></span>
+                    </div>
+                    <div class="arrow up">
+                      <i class="fas fa-arrow-up"></i>
+                    </div>
+                    <div class="status">Trending</div>
+                    <div class="link">
+                      <a href="#">View More</a>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="number"><span>ANU-2</span></div>
+                    <div class="name">We will develop and apply performance standards for staff that are commensurate with the world's great universities.</div>
+                    <div class="state">
+                      <span class="info"></span>
+                    </div>
+                    <div class="arrow bi-directional">
+                      <i class="fas fa-arrows-alt-h"></i>
+                    </div>
+                    <div class="status">Trending</div>
+                    <div class="link">
+                      <a href="#">View More</a>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="number"><span>ANU-3</span></div>
+                    <div class="name">We will provide substantial start-up grants for high-potential early and mid-career researchers, enabling us to compete against any institution in the world. At least 50 per cent of this support will be allocated to women.</div>
+                    <div class="state">
+                      <span class="danger"></span>
+                    </div>
+                    <div class="arrow up">
+                      <i class="fas fa-arrow-up"></i>
+                    </div>
+                    <div class="status">Trending</div>
+                    <div class="link">
+                      <a href="#">View More</a>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="number"><span>ANU-4</span></div>
+                    <div class="name">We will maintain the most demanding student entry standards in the nation, commensurate with the world’s great universities.</div>
+                    <div class="state">
+                      <span class="info"></span>
+                    </div>
+                    <div class="arrow down">
+                      <i class="fas fa-arrow-down"></i>
+                    </div>
+                    <div class="status">Trending</div>
+                    <div class="link">
+                      <a href="#">View More</a>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="number"><span>ANU-5</span></div>
+                    <div class="name">We will invest over the course of the Plan in five globally-significant research challenges that deliver solutions to national priorities,  and ensure core disciplines and research strengths are ranked alongside the best in the world.</div>
+                    <div class="state">
+                      <span class="not-available"></span>
+                    </div>
+                    <div class="arrow up">
+                      <i class="fas fa-arrow-up"></i>
+                    </div>
+                    <div class="status">Trending</div>
+                    <div class="link">
+                      <a href="#">View More</a>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="collapse-4-head">
+              <h5 class="mb-0"
+              data-toggle="collapse" data-target="#collapse-4"
+              aria-expanded="false" aria-controls="collapse-4">
+                <div class="name-group">
+                  <div class="goal-number">SG-4</div>
+                  <div class="goal-name">Building a culture of collegiality and Engagement - Across and Beyond ANU</div>
+                </div>
+                <div class="status-group">
+                  <div class="goal-stage">
+                    <span class="danger"></span>Exceeds Tolerance
+                  </div>
+                  <div class="collapse-state">
+                    <i class="fas fa-caret-right"></i>
+                  </div>
+                </div>
+              </h5>
+            </div>
+            <div id="collapse-4" class="collapse" aria-labelledby="collapse-4-head" data-parent="#strategic-goals-group">
+              <div class="card-body">
+                <ul>
+                  <li>
+                    <div class="number"><span>ANU-1</span></div>
+                    <div class="name">We will lead the nation in the recruitment, retention, mentoring, management and development of academic and professional staff.</div>
+                    <div class="state">
+                      <span class="good"></span>
+                    </div>
+                    <div class="arrow up">
+                      <i class="fas fa-arrow-up"></i>
+                    </div>
+                    <div class="status">Trending</div>
+                    <div class="link">
+                      <a href="#">View More</a>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="number"><span>ANU-2</span></div>
+                    <div class="name">We will develop and apply performance standards for staff that are commensurate with the world's great universities.</div>
+                    <div class="state">
+                      <span class="info"></span>
+                    </div>
+                    <div class="arrow bi-directional">
+                      <i class="fas fa-arrows-alt-h"></i>
+                    </div>
+                    <div class="status">Trending</div>
+                    <div class="link">
+                      <a href="#">View More</a>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="number"><span>ANU-3</span></div>
+                    <div class="name">We will provide substantial start-up grants for high-potential early and mid-career researchers, enabling us to compete against any institution in the world. At least 50 per cent of this support will be allocated to women.</div>
+                    <div class="state">
+                      <span class="danger"></span>
+                    </div>
+                    <div class="arrow up">
+                      <i class="fas fa-arrow-up"></i>
+                    </div>
+                    <div class="status">Trending</div>
+                    <div class="link">
+                      <a href="#">View More</a>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="number"><span>ANU-4</span></div>
+                    <div class="name">We will maintain the most demanding student entry standards in the nation, commensurate with the world’s great universities.</div>
+                    <div class="state">
+                      <span class="info"></span>
+                    </div>
+                    <div class="arrow down">
+                      <i class="fas fa-arrow-down"></i>
+                    </div>
+                    <div class="status">Trending</div>
+                    <div class="link">
+                      <a href="#">View More</a>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="number"><span>ANU-5</span></div>
+                    <div class="name">We will invest over the course of the Plan in five globally-significant research challenges that deliver solutions to national priorities,  and ensure core disciplines and research strengths are ranked alongside the best in the world.</div>
+                    <div class="state">
+                      <span class="not-available"></span>
+                    </div>
+                    <div class="arrow up">
+                      <i class="fas fa-arrow-up"></i>
+                    </div>
+                    <div class="status">Trending</div>
+                    <div class="link">
+                      <a href="#">View More</a>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="collapse-5-head">
+              <h5 class="mb-0"
+              data-toggle="collapse" data-target="#collapse-5"
+              aria-expanded="false" aria-controls="collapse-5">
+                <div class="name-group">
+                  <div class="goal-number">SG-5</div>
+                  <div class="goal-name">Achiving Equity - Within ANU and in society</div>
+                </div>
+                <div class="status-group">
+                  <div class="goal-stage">
+                    <span class="good"></span>Within Tolerance
+                  </div>
+                  <div class="collapse-state">
+                    <i class="fas fa-caret-right"></i>
+                  </div>
+                </div>
+              </h5>
+            </div>
+            <div id="collapse-5" class="collapse" aria-labelledby="collapse-5-head" data-parent="#strategic-goals-group">
+              <div class="card-body">
+                <ul>
+                  <li>
+                    <div class="number"><span>ANU-1</span></div>
+                    <div class="name">We will lead the nation in the recruitment, retention, mentoring, management and development of academic and professional staff.</div>
+                    <div class="state">
+                      <span class="good"></span>
+                    </div>
+                    <div class="arrow up">
+                      <i class="fas fa-arrow-up"></i>
+                    </div>
+                    <div class="status">Trending</div>
+                    <div class="link">
+                      <a href="#">View More</a>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="number"><span>ANU-2</span></div>
+                    <div class="name">We will develop and apply performance standards for staff that are commensurate with the world's great universities.</div>
+                    <div class="state">
+                      <span class="info"></span>
+                    </div>
+                    <div class="arrow bi-directional">
+                      <i class="fas fa-arrows-alt-h"></i>
+                    </div>
+                    <div class="status">Trending</div>
+                    <div class="link">
+                      <a href="#">View More</a>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="number"><span>ANU-3</span></div>
+                    <div class="name">We will provide substantial start-up grants for high-potential early and mid-career researchers, enabling us to compete against any institution in the world. At least 50 per cent of this support will be allocated to women.</div>
+                    <div class="state">
+                      <span class="danger"></span>
+                    </div>
+                    <div class="arrow up">
+                      <i class="fas fa-arrow-up"></i>
+                    </div>
+                    <div class="status">Trending</div>
+                    <div class="link">
+                      <a href="#">View More</a>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="number"><span>ANU-4</span></div>
+                    <div class="name">We will maintain the most demanding student entry standards in the nation, commensurate with the world’s great universities.</div>
+                    <div class="state">
+                      <span class="info"></span>
+                    </div>
+                    <div class="arrow down">
+                      <i class="fas fa-arrow-down"></i>
+                    </div>
+                    <div class="status">Trending</div>
+                    <div class="link">
+                      <a href="#">View More</a>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="number"><span>ANU-5</span></div>
+                    <div class="name">We will invest over the course of the Plan in five globally-significant research challenges that deliver solutions to national priorities,  and ensure core disciplines and research strengths are ranked alongside the best in the world.</div>
+                    <div class="state">
+                      <span class="not-available"></span>
+                    </div>
+                    <div class="arrow up">
+                      <i class="fas fa-arrow-up"></i>
+                    </div>
+                    <div class="status">Trending</div>
+                    <div class="link">
+                      <a href="#">View More</a>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
-    <script src="./assets/js/jquery-3.3.1.min.js"></script>
-    <script src="./assets/js/popper.min.js"></script>
-    <script src="./assets/js/bootstrap.min.js"></script>
-    <script src="./assets/js/scripts.js"></script>
-  </body>
+  </div>
+  <div class="container-fluid animated slideInUp faster d-none" id="strategic-plans-detailed-view">
+    <div class="row">
+      <div class="col-2 back">
+        <img src="./assets/images/icons/back.svg" alt="Back to Strategic Plans List">
+      </div>
+      <div class="col-10">
+        <h2>Select a Business Unit / Plan to view related Initiatives</h2>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div class="row mt-3">
+        <div class="col-3 key-initiatives">
+          <h3>Key Initiatives</h3>
+          <div class="initiatives">
+            <h4>A1</h4>
+            <p>Regenerate academic recruitment policies and procedures to reflect the performance expectations of the world's best universities and lobal best practice in diversity</p>
+            <h5>Progress</h5>
+            <ul class="progress-list">
+              <li>Discussion held with the university leadership group on approches. Will be held with SMG in an upcoming meeting.</li>
+              <li>Accademic Perfomance lindicator working group representation agreed, initial papper not working group drafted</li>
+              <li>Given potential pushback a slower approach is being taken to generate additional buy in before proceeding to formal policies and procedures. This has revised the end date for delivery</li>
+            </ul>
+            <h5>Risk</h5>
+            <ul class="risk-list">
+              <li>T1/T2</li>
+            </ul>
+            <h5>Timeline</h5>
+            <div class="timeline-graph">
+
+            </div>
+            <h5>Status</h5>
+            <ul class="status-list">
+              <li><span class="good"></span> Within Tolerance</li>
+              <li>
+                <div class="bi-directional">
+                  <i class="fas fa-arrows-alt-h"></i>
+                </div> Trending
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-4 linked-business">
+          <h3>Linked Business Units / Plans<span>(16)</span></h3>
+          <table class="table table-borderless">
+          <tbody>
+            <tr>
+              <th><i class="fas fa-circle"></i></th>
+              <td>Acadamic executive plan (A)</td>
+              <td>10</td>
+            </tr>
+            <tr>
+              <th><i class="fas fa-circle"></i></th>
+              <td>Resources executive plan (RES)</td>
+              <td>9</td>
+            </tr>
+            <tr>
+              <th><i class="fas fa-circle"></i></th>
+              <td>Research &amp; Innovation executive plan (R&I)</td>
+              <td>2</td>
+            </tr>
+            <tr>
+              <th><i class="fas fa-circle"></i></th>
+              <td>Social Transformation executive plan (ST)</td>
+              <td>6</td>
+            </tr>
+            <tr>
+              <th><i class="fas fa-circle"></i></th>
+              <td>College of asia & the pacific plan (CAP)</td>
+              <td>3</td>
+            </tr>
+            <!-- Repeating -->
+            <tr>
+              <th><i class="fas fa-circle"></i></th>
+              <td>Acadamic executive plan (A)</td>
+              <td>10</td>
+            </tr>
+            <tr>
+              <th><i class="fas fa-circle"></i></th>
+              <td>Resources executive plan (RES)</td>
+              <td>9</td>
+            </tr>
+            <tr>
+              <th><i class="fas fa-circle"></i></th>
+              <td>Research &amp; Innovation executive plan (R&I)</td>
+              <td>2</td>
+            </tr>
+            <tr>
+              <th><i class="fas fa-circle"></i></th>
+              <td>Social Transformation executive plan (ST)</td>
+              <td>6</td>
+            </tr>
+            <tr>
+              <th><i class="fas fa-circle"></i></th>
+              <td>College of asia & the pacific plan (CAP)</td>
+              <td>3</td>
+            </tr>
+            <tr>
+              <th><i class="fas fa-circle"></i></th>
+              <td>Acadamic executive plan (A)</td>
+              <td>10</td>
+            </tr>
+            <tr>
+              <th><i class="fas fa-circle"></i></th>
+              <td>Resources executive plan (RES)</td>
+              <td>9</td>
+            </tr>
+            <tr>
+              <th><i class="fas fa-circle"></i></th>
+              <td>Research &amp; Innovation executive plan (R&I)</td>
+              <td>2</td>
+            </tr>
+            <tr>
+              <th><i class="fas fa-circle"></i></th>
+              <td>Social Transformation executive plan (ST)</td>
+              <td>6</td>
+            </tr>
+            <tr>
+              <th><i class="fas fa-circle"></i></th>
+              <td>College of asia & the pacific plan (CAP)</td>
+              <td>3</td>
+            </tr>
+            <tr>
+              <th><i class="fas fa-circle"></i></th>
+              <td>Acadamic executive plan (A)</td>
+              <td>10</td>
+            </tr>
+            <tr>
+              <th><i class="fas fa-circle"></i></th>
+              <td>College of asia & the pacific plan (CAP)</td>
+              <td>3</td>
+            </tr>
+          </tbody>
+        </table>
+        </div>
+        <div class="col-5 linked-initiatives">
+          <h3>Linked Initiatives<span>(16)</span></h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./assets/js/jquery-3.3.1.min.js"></script>
+  <script src="./assets/js/popper.min.js"></script>
+  <script src="./assets/js/bootstrap.min.js"></script>
+  <script src="./assets/js/scripts.js"></script>
+</body>
 </html>

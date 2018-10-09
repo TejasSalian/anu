@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 67 67">
+  <defs>
+    <style>
+      .a {
+        fill: gray;
+      }
+
+      .b {
+        fill: none;
+        stroke: gray;
+        stroke-linecap: round;
+        stroke-miterlimit: 10;
+        stroke-width: 2.75px;
+      }
+    </style>
+  </defs>
+  <title>close</title>
+  <g>
+    <path class="a" d="M33.5,1.5A32,32,0,0,1,60.79,50.19l1.1,1.09A33.5,33.5,0,0,0,15.72,5.11l1.09,1.1A31.78,31.78,0,0,1,33.5,1.5Z"/>
+    <path class="a" d="M33.5,65.5A32,32,0,0,1,6.21,16.81l-1.1-1.09A33.5,33.5,0,0,0,51.28,61.89l-1.09-1.1A31.78,31.78,0,0,1,33.5,65.5Z"/>
+    <line class="b" x1="22.83" y1="23.33" x2="41.17" y2="41.67"/>
+    <line class="b" x1="22.83" y1="41.67" x2="41.17" y2="23.33"/>
+  </g>
+</svg>

@@ -1,4 +1,6 @@
 @import 'mixins';
+@import 'switches';
+@import 'strategystate';
 $img : '../images/';
 
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600');
@@ -58,4 +60,357 @@ body{
 
 .navbar{
   @include menu-gradient();
+  box-shadow: 0 -20px 44px 23px hsla(0, 0%, 0%, 0.56);
+  .row{
+    width: 100%;
+    padding-left: 5%;
+    padding-right: 5%;
+    .navbar-brand{
+      img{
+        margin: 26px 50px 0 0;
+      }
+    }
+    .oneBySeven{
+      width: calc((100% / 7) * 1);
+      float: left;
+    }
+    .fiveBySeven{
+      width: calc((100% / 7) * 5);
+      float: left;
+    }
+    ul{
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      li{
+        padding: 4px 60px;
+        margin: 32px 0;
+        @media screen and (max-width: 1811px){
+          padding: 4px 20px;
+        }
+        &.active{
+          background: white;
+          border-radius: 2px;
+          a{
+            color: black;
+          }
+        }
+        a{
+          color: white;
+        }
+      }
+    }
+    .hierarchy{
+      float: right;
+      img{
+        float: right;
+        width: 75px;
+        margin: 14px 0px;
+        cursor: pointer;
+      }
+    }
+  }
+}
+.strategic-plans-summary{
+  margin-top: 26vh;
+  h1{
+    font-size: 150%;
+    text-align: center;
+    margin-bottom: 0px;
+    margin-top: 6px;
+    span{
+      background-color: #9676e5;
+      padding: 5px 10px;
+      color: white;
+      font-weight: bold;
+    }
+  }
+}
+.strategic-goals{
+  h2{
+    font-size: 100%;
+    padding-bottom: 10px;
+    border-bottom: 1px dashed  rgba(0,0,0,0.12);
+  }
+  .goals{
+    .card{
+      margin: 8px 0px;
+      border-radius: 0;
+      &:last-child{
+        .card-header{
+            border-bottom: 0px;
+        }
+      }
+    }
+    .card-header {
+      background-color: rgba(0, 0, 0, 0);
+      h5{
+        font-size: 100%;
+        cursor: pointer;
+        .name-group{
+          display: inline-block;
+          width: 75%;
+          float: left;
+          div{
+            display: inline-block;
+          }
+          .goal-number{
+            font-weight: bold;
+            padding: 5px 10px;
+            float: left;
+          }
+          .goal-name{
+            font-weight: normal;
+            float: left;
+            padding: 5px 10px;
+          }
+
+        }
+        .status-group{
+          display: inline-block;
+          width: 25%;
+          float: left;
+          .goal-stage{
+            font-weight: normal;
+            float: left;
+            span{
+              @extend .strategystate;
+            }
+          }
+          .collapse-state{
+            float: right;
+            display: inline-block;
+            position: absolute;
+            top: 18px;
+            right: 30px;
+            transition: all;
+            transition-duration: 0.3s;
+            transition-timing-function: ease-in-out;
+          }
+        }
+        &::after{
+          position: relative;
+        }
+      }
+      h5[aria-expanded="false"]{
+        .collapse-state{
+          transform: rotateZ(00deg);
+        }
+      }
+      h5[aria-expanded="true"]{
+        .collapse-state{
+          transform: rotateZ(90deg);
+        }
+      }
+    }
+    .card-body{
+      padding: 0 1.25rem;
+      background-color: #f3f3f4;
+      ul{
+        list-style: none;
+        display: block;
+        margin: 0;
+        padding: 0;
+        li{
+          background-color: #f3f3f4;
+          border-bottom: 1px solid #eaeaeb;
+          width: 100%;
+          display: flex;
+          font-size: 80%;
+          padding-top: 10px;
+          padding-bottom: 5px;
+          div{
+            float: left;
+          }
+          .number{
+            width: 60px;
+            min-width: 60px;
+            display: block;
+            height: 28px;
+            span{
+              background-color: #eaeaeb;
+              padding: 2px 8px;
+              position: absolute;
+              left: 0px;
+            }
+          }
+          .name{
+            width: calc(70% - 16px);
+          }
+          .state{
+            width: 54px;
+            text-align: center;
+            span{
+              font-size: 100%;
+              @extend .strategystate;
+              &::before{
+                top: 0px;
+              }
+              &::after{
+                top: -6px;
+              }
+            }
+          }
+          .arrow{
+            width: 40px;
+            text-align: center;
+            font-size: 175%;
+            &.up{
+              color: #54b758;
+            }
+            &.down{
+              color: #9E9E9E;
+            }
+            &.bi-directional{
+              color: #2196F3;
+            }
+            .fas{
+              position: relative;
+              top: -5px;
+            }
+          }
+          .status{
+            width: calc(30% - 218px);
+            text-align: center;
+          }
+          .link{
+            text-align: right;
+            width: 70px;
+          }
+        }
+      }
+    }
+  }
+}
+#strategic-plans-detailed-view{
+  margin-top: 26vh;
+  .back{
+    max-width: 80px;
+    cursor: pointer;
+  }
+  h2{
+    color: #999;
+    font-size: 110%;
+    margin-top: 12px;
+    text-align: center;
+  }
+  h3{
+    border-bottom: 2px solid #fff;
+    font-size: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+  }
+  .key-initiatives{
+    h3{
+      border-color: #987ee5;
+    }
+    .initiatives{
+      background-color: #e0e0e4;
+      padding: 15px 30px;
+      h4{
+        @extend h5;
+        margin-left: -10px;
+        &::before{
+          content: ' ';
+          background-color: #987ee5;
+          height: 12px;
+          width: 12px;
+          display: inline-block;
+          position: relative;
+          left: -10px;
+        }
+      }
+      h5{
+        font-size: 100%;
+        font-weight: bold;
+      }
+      p{
+        font-weight: bold;
+        font-size: 90%;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        border-bottom: 1px dashed #b0acbd;
+      }
+      .progress-list{
+
+      }
+      .risk-list{
+        list-style: none;
+      }
+      .status-list{
+        list-style: none;
+        li{
+          margin-bottom: 10px;
+          span{
+            @extend .strategystate;
+          }
+          div{
+            display: inline-block;
+            &.up{
+              color: #54b758;
+            }
+            &.down{
+              color: #9E9E9E;
+            }
+            &.bi-directional{
+              color: #2196F3;
+            }
+            .fas{
+              position: relative;
+              top: 3px;
+              left: 2px;
+              font-size: 125%;
+              margin-right: 14px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .linked-business{
+    h3{
+      border-color: #26d8d2;
+    }
+    span{
+      margin-left: 6px;
+      opacity: 0.5;
+    }
+    table{
+      i{
+        font-size: 50%;
+        position: relative;
+        top: -2px;
+        left: 4px;
+        color: #999;
+      }
+    }
+  }
+  .linked-initiatives{
+    h3{
+      border-color: #d7dddc;
+    }
+    span{
+      margin-left: 6px;
+      opacity: 0.5;
+    }
+    p{
+      padding-left: 45px;
+      font-size: 100%;
+      margin-bottom: 10px;
+      font-weight: bold;
+      &::before{
+        content: ' ';
+        background-color: #999;
+        // border-radius: 50%;
+        width: 7px;
+        height: 7px;
+        display: inline-block;
+        position: absolute;
+        margin-left: -20px;
+        margin-top: 8px;
+      }
+    }
+  }
 }

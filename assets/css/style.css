@@ -1,4 +1,114 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600");
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 44px;
+  height: 14px; }
+
+.switch input {
+  display: none; }
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #9676e5;
+  -webkit-transition: .4s;
+  transition: .4s;
+  -webkit-box-shadow: inset 0 0 6px 0px rgba(0, 0, 0, 0.54);
+  -moz-box-shadow: inset 0 0 6px 0px rgba(0, 0, 0, 0.54);
+  box-shadow: inset 0 0 6px 0px rgba(0, 0, 0, 0.54); }
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  border: 5px solid #ffffff;
+  left: 0px;
+  bottom: -3px;
+  background-color: #d3dae0;
+  -webkit-transition: .4s;
+  transition: .4s;
+  -webkit-box-shadow: 0 0 6px 0px rgba(0, 0, 0, 0.54);
+  -moz-box-shadow: 0 0 6px 0px rgba(0, 0, 0, 0.54);
+  box-shadow: 0 0 6px 0px rgba(0, 0, 0, 0.54); }
+
+input:checked + .slider {
+  background-color: #9676e5; }
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3; }
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px); }
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px; }
+
+.slider.round:before {
+  border-radius: 50%; }
+
+label.switch {
+  margin-right: 6px;
+  margin-left: 6px;
+  margin-bottom: -2px;
+  margin-top: 0px; }
+
+.switch-purple {
+  border-radius: 25px;
+  background-color: #9676e5;
+  width: 148px;
+  text-align: center;
+  padding: 8px 0px;
+  color: white; }
+
+.strategystate, .strategic-goals .goals .card-header h5 .status-group .goal-stage span, .strategic-goals .goals .card-header #strategic-plans-detailed-view .key-initiatives .initiatives h4 .status-group .goal-stage span, #strategic-plans-detailed-view .key-initiatives .initiatives .strategic-goals .goals .card-header h4 .status-group .goal-stage span, .strategic-goals .goals .card-body ul li .state span, #strategic-plans-detailed-view .key-initiatives .initiatives .status-list li span {
+  color: white;
+  font-size: 85%;
+  font-weight: 700; }
+  .strategystate::before, .strategic-goals .goals .card-header h5 .status-group .goal-stage span::before, .strategic-goals .goals .card-header #strategic-plans-detailed-view .key-initiatives .initiatives h4 .status-group .goal-stage span::before, #strategic-plans-detailed-view .key-initiatives .initiatives .strategic-goals .goals .card-header h4 .status-group .goal-stage span::before, .strategic-goals .goals .card-body ul li .state span::before, #strategic-plans-detailed-view .key-initiatives .initiatives .status-list li span::before {
+    content: ' ';
+    width: 22px;
+    height: 22px;
+    border-radius: 100%;
+    display: inline-block;
+    position: relative;
+    top: 6px; }
+  .strategystate::after, .strategic-goals .goals .card-header h5 .status-group .goal-stage span::after, .strategic-goals .goals .card-header #strategic-plans-detailed-view .key-initiatives .initiatives h4 .status-group .goal-stage span::after, #strategic-plans-detailed-view .key-initiatives .initiatives .strategic-goals .goals .card-header h4 .status-group .goal-stage span::after, .strategic-goals .goals .card-body ul li .state span::after, #strategic-plans-detailed-view .key-initiatives .initiatives .status-list li span::after {
+    position: relative;
+    left: -16px;
+    top: 0px;
+    font-size: 100%; }
+  .strategystate.good::before, .strategic-goals .goals .card-header h5 .status-group .goal-stage span.good::before, .strategic-goals .goals .card-header #strategic-plans-detailed-view .key-initiatives .initiatives h4 .status-group .goal-stage span.good::before, #strategic-plans-detailed-view .key-initiatives .initiatives .strategic-goals .goals .card-header h4 .status-group .goal-stage span.good::before, .strategic-goals .goals .card-body ul li .state span.good::before, #strategic-plans-detailed-view .key-initiatives .initiatives .status-list li span.good::before {
+    background-color: #54b758; }
+  .strategystate.good::after, .strategic-goals .goals .card-header h5 .status-group .goal-stage span.good::after, .strategic-goals .goals .card-header #strategic-plans-detailed-view .key-initiatives .initiatives h4 .status-group .goal-stage span.good::after, #strategic-plans-detailed-view .key-initiatives .initiatives .strategic-goals .goals .card-header h4 .status-group .goal-stage span.good::after, .strategic-goals .goals .card-body ul li .state span.good::after, #strategic-plans-detailed-view .key-initiatives .initiatives .status-list li span.good::after {
+    content: "G"; }
+  .strategystate.danger::before, .strategic-goals .goals .card-header h5 .status-group .goal-stage span.danger::before, .strategic-goals .goals .card-header #strategic-plans-detailed-view .key-initiatives .initiatives h4 .status-group .goal-stage span.danger::before, #strategic-plans-detailed-view .key-initiatives .initiatives .strategic-goals .goals .card-header h4 .status-group .goal-stage span.danger::before, .strategic-goals .goals .card-body ul li .state span.danger::before, #strategic-plans-detailed-view .key-initiatives .initiatives .status-list li span.danger::before {
+    background-color: #FF5722; }
+  .strategystate.danger::after, .strategic-goals .goals .card-header h5 .status-group .goal-stage span.danger::after, .strategic-goals .goals .card-header #strategic-plans-detailed-view .key-initiatives .initiatives h4 .status-group .goal-stage span.danger::after, #strategic-plans-detailed-view .key-initiatives .initiatives .strategic-goals .goals .card-header h4 .status-group .goal-stage span.danger::after, .strategic-goals .goals .card-body ul li .state span.danger::after, #strategic-plans-detailed-view .key-initiatives .initiatives .status-list li span.danger::after {
+    content: "A"; }
+  .strategystate.warning::before, .strategic-goals .goals .card-header h5 .status-group .goal-stage span.warning::before, .strategic-goals .goals .card-header #strategic-plans-detailed-view .key-initiatives .initiatives h4 .status-group .goal-stage span.warning::before, #strategic-plans-detailed-view .key-initiatives .initiatives .strategic-goals .goals .card-header h4 .status-group .goal-stage span.warning::before, .strategic-goals .goals .card-body ul li .state span.warning::before, #strategic-plans-detailed-view .key-initiatives .initiatives .status-list li span.warning::before {
+    background-color: orange; }
+  .strategystate.warning::after, .strategic-goals .goals .card-header h5 .status-group .goal-stage span.warning::after, .strategic-goals .goals .card-header #strategic-plans-detailed-view .key-initiatives .initiatives h4 .status-group .goal-stage span.warning::after, #strategic-plans-detailed-view .key-initiatives .initiatives .strategic-goals .goals .card-header h4 .status-group .goal-stage span.warning::after, .strategic-goals .goals .card-body ul li .state span.warning::after, #strategic-plans-detailed-view .key-initiatives .initiatives .status-list li span.warning::after {
+    content: "R"; }
+  .strategystate.info::before, .strategic-goals .goals .card-header h5 .status-group .goal-stage span.info::before, .strategic-goals .goals .card-header #strategic-plans-detailed-view .key-initiatives .initiatives h4 .status-group .goal-stage span.info::before, #strategic-plans-detailed-view .key-initiatives .initiatives .strategic-goals .goals .card-header h4 .status-group .goal-stage span.info::before, .strategic-goals .goals .card-body ul li .state span.info::before, #strategic-plans-detailed-view .key-initiatives .initiatives .status-list li span.info::before {
+    background-color: #2196F3; }
+  .strategystate.info::after, .strategic-goals .goals .card-header h5 .status-group .goal-stage span.info::after, .strategic-goals .goals .card-header #strategic-plans-detailed-view .key-initiatives .initiatives h4 .status-group .goal-stage span.info::after, #strategic-plans-detailed-view .key-initiatives .initiatives .strategic-goals .goals .card-header h4 .status-group .goal-stage span.info::after, .strategic-goals .goals .card-body ul li .state span.info::after, #strategic-plans-detailed-view .key-initiatives .initiatives .status-list li span.info::after {
+    content: "C"; }
+  .strategystate.not-available::before, .strategic-goals .goals .card-header h5 .status-group .goal-stage span.not-available::before, .strategic-goals .goals .card-header #strategic-plans-detailed-view .key-initiatives .initiatives h4 .status-group .goal-stage span.not-available::before, #strategic-plans-detailed-view .key-initiatives .initiatives .strategic-goals .goals .card-header h4 .status-group .goal-stage span.not-available::before, .strategic-goals .goals .card-body ul li .state span.not-available::before, #strategic-plans-detailed-view .key-initiatives .initiatives .status-list li span.not-available::before {
+    background-color: #ffffff4a;
+    border: 1px solid #b2b5b7; }
+  .strategystate.not-available::after, .strategic-goals .goals .card-header h5 .status-group .goal-stage span.not-available::after, .strategic-goals .goals .card-header #strategic-plans-detailed-view .key-initiatives .initiatives h4 .status-group .goal-stage span.not-available::after, #strategic-plans-detailed-view .key-initiatives .initiatives .strategic-goals .goals .card-header h4 .status-group .goal-stage span.not-available::after, .strategic-goals .goals .card-body ul li .state span.not-available::after, #strategic-plans-detailed-view .key-initiatives .initiatives .status-list li span.not-available::after {
+    content: "O";
+    color: #fff0; }
+
 body {
   font-family: 'Montserrat', sans-serif;
   font-size: 100%;
@@ -56,6 +166,257 @@ body {
   background: -ms-linear-gradient(0deg, #1de1d1 0%, #52b3d9 50%, #9776e5 100%);
   -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#1DE1D1', endColorstr='#9776E5' ,GradientType=0)";
   background: linear-gradient(90deg, #1de1d1 0%, #52b3d9 50%, #9776e5 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1DE1D1',endColorstr='#9776E5' , GradientType=1); }
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1DE1D1',endColorstr='#9776E5' , GradientType=1);
+  box-shadow: 0 -20px 44px 23px rgba(0, 0, 0, 0.56); }
+  .navbar .row {
+    width: 100%;
+    padding-left: 5%;
+    padding-right: 5%; }
+    .navbar .row .navbar-brand img {
+      margin: 26px 50px 0 0; }
+    .navbar .row .oneBySeven {
+      width: calc((100% / 7) * 1);
+      float: left; }
+    .navbar .row .fiveBySeven {
+      width: calc((100% / 7) * 5);
+      float: left; }
+    .navbar .row ul {
+      list-style: none;
+      padding: 0;
+      margin: 0; }
+      .navbar .row ul li {
+        padding: 4px 60px;
+        margin: 32px 0; }
+        @media screen and (max-width: 1811px) {
+          .navbar .row ul li {
+            padding: 4px 20px; } }
+        .navbar .row ul li.active {
+          background: white;
+          border-radius: 2px; }
+          .navbar .row ul li.active a {
+            color: black; }
+        .navbar .row ul li a {
+          color: white; }
+    .navbar .row .hierarchy {
+      float: right; }
+      .navbar .row .hierarchy img {
+        float: right;
+        width: 75px;
+        margin: 14px 0px;
+        cursor: pointer; }
+
+.strategic-plans-summary {
+  margin-top: 26vh; }
+  .strategic-plans-summary h1 {
+    font-size: 150%;
+    text-align: center;
+    margin-bottom: 0px;
+    margin-top: 6px; }
+    .strategic-plans-summary h1 span {
+      background-color: #9676e5;
+      padding: 5px 10px;
+      color: white;
+      font-weight: bold; }
+
+.strategic-goals h2 {
+  font-size: 100%;
+  padding-bottom: 10px;
+  border-bottom: 1px dashed rgba(0, 0, 0, 0.12); }
+.strategic-goals .goals .card {
+  margin: 8px 0px;
+  border-radius: 0; }
+  .strategic-goals .goals .card:last-child .card-header {
+    border-bottom: 0px; }
+.strategic-goals .goals .card-header {
+  background-color: rgba(0, 0, 0, 0); }
+  .strategic-goals .goals .card-header h5, .strategic-goals .goals .card-header #strategic-plans-detailed-view .key-initiatives .initiatives h4, #strategic-plans-detailed-view .key-initiatives .initiatives .strategic-goals .goals .card-header h4 {
+    font-size: 100%;
+    cursor: pointer; }
+    .strategic-goals .goals .card-header h5 .name-group, .strategic-goals .goals .card-header #strategic-plans-detailed-view .key-initiatives .initiatives h4 .name-group, #strategic-plans-detailed-view .key-initiatives .initiatives .strategic-goals .goals .card-header h4 .name-group {
+      display: inline-block;
+      width: 75%;
+      float: left; }
+      .strategic-goals .goals .card-header h5 .name-group div, .strategic-goals .goals .card-header #strategic-plans-detailed-view .key-initiatives .initiatives h4 .name-group div, #strategic-plans-detailed-view .key-initiatives .initiatives .strategic-goals .goals .card-header h4 .name-group div {
+        display: inline-block; }
+      .strategic-goals .goals .card-header h5 .name-group .goal-number, .strategic-goals .goals .card-header #strategic-plans-detailed-view .key-initiatives .initiatives h4 .name-group .goal-number, #strategic-plans-detailed-view .key-initiatives .initiatives .strategic-goals .goals .card-header h4 .name-group .goal-number {
+        font-weight: bold;
+        padding: 5px 10px;
+        float: left; }
+      .strategic-goals .goals .card-header h5 .name-group .goal-name, .strategic-goals .goals .card-header #strategic-plans-detailed-view .key-initiatives .initiatives h4 .name-group .goal-name, #strategic-plans-detailed-view .key-initiatives .initiatives .strategic-goals .goals .card-header h4 .name-group .goal-name {
+        font-weight: normal;
+        float: left;
+        padding: 5px 10px; }
+    .strategic-goals .goals .card-header h5 .status-group, .strategic-goals .goals .card-header #strategic-plans-detailed-view .key-initiatives .initiatives h4 .status-group, #strategic-plans-detailed-view .key-initiatives .initiatives .strategic-goals .goals .card-header h4 .status-group {
+      display: inline-block;
+      width: 25%;
+      float: left; }
+      .strategic-goals .goals .card-header h5 .status-group .goal-stage, .strategic-goals .goals .card-header #strategic-plans-detailed-view .key-initiatives .initiatives h4 .status-group .goal-stage, #strategic-plans-detailed-view .key-initiatives .initiatives .strategic-goals .goals .card-header h4 .status-group .goal-stage {
+        font-weight: normal;
+        float: left; }
+      .strategic-goals .goals .card-header h5 .status-group .collapse-state, .strategic-goals .goals .card-header #strategic-plans-detailed-view .key-initiatives .initiatives h4 .status-group .collapse-state, #strategic-plans-detailed-view .key-initiatives .initiatives .strategic-goals .goals .card-header h4 .status-group .collapse-state {
+        float: right;
+        display: inline-block;
+        position: absolute;
+        top: 18px;
+        right: 30px;
+        transition: all;
+        transition-duration: 0.3s;
+        transition-timing-function: ease-in-out; }
+    .strategic-goals .goals .card-header h5::after, .strategic-goals .goals .card-header #strategic-plans-detailed-view .key-initiatives .initiatives h4::after, #strategic-plans-detailed-view .key-initiatives .initiatives .strategic-goals .goals .card-header h4::after {
+      position: relative; }
+  .strategic-goals .goals .card-header h5[aria-expanded="false"] .collapse-state, .strategic-goals .goals .card-header #strategic-plans-detailed-view .key-initiatives .initiatives h4[aria-expanded="false"] .collapse-state, #strategic-plans-detailed-view .key-initiatives .initiatives .strategic-goals .goals .card-header h4[aria-expanded="false"] .collapse-state {
+    transform: rotateZ(0deg); }
+  .strategic-goals .goals .card-header h5[aria-expanded="true"] .collapse-state, .strategic-goals .goals .card-header #strategic-plans-detailed-view .key-initiatives .initiatives h4[aria-expanded="true"] .collapse-state, #strategic-plans-detailed-view .key-initiatives .initiatives .strategic-goals .goals .card-header h4[aria-expanded="true"] .collapse-state {
+    transform: rotateZ(90deg); }
+.strategic-goals .goals .card-body {
+  padding: 0 1.25rem;
+  background-color: #f3f3f4; }
+  .strategic-goals .goals .card-body ul {
+    list-style: none;
+    display: block;
+    margin: 0;
+    padding: 0; }
+    .strategic-goals .goals .card-body ul li {
+      background-color: #f3f3f4;
+      border-bottom: 1px solid #eaeaeb;
+      width: 100%;
+      display: flex;
+      font-size: 80%;
+      padding-top: 10px;
+      padding-bottom: 5px; }
+      .strategic-goals .goals .card-body ul li div {
+        float: left; }
+      .strategic-goals .goals .card-body ul li .number {
+        width: 60px;
+        min-width: 60px;
+        display: block;
+        height: 28px; }
+        .strategic-goals .goals .card-body ul li .number span {
+          background-color: #eaeaeb;
+          padding: 2px 8px;
+          position: absolute;
+          left: 0px; }
+      .strategic-goals .goals .card-body ul li .name {
+        width: calc(70% - 16px); }
+      .strategic-goals .goals .card-body ul li .state {
+        width: 54px;
+        text-align: center; }
+        .strategic-goals .goals .card-body ul li .state span {
+          font-size: 100%; }
+          .strategic-goals .goals .card-body ul li .state span::before {
+            top: 0px; }
+          .strategic-goals .goals .card-body ul li .state span::after {
+            top: -6px; }
+      .strategic-goals .goals .card-body ul li .arrow {
+        width: 40px;
+        text-align: center;
+        font-size: 175%; }
+        .strategic-goals .goals .card-body ul li .arrow.up {
+          color: #54b758; }
+        .strategic-goals .goals .card-body ul li .arrow.down {
+          color: #9E9E9E; }
+        .strategic-goals .goals .card-body ul li .arrow.bi-directional {
+          color: #2196F3; }
+        .strategic-goals .goals .card-body ul li .arrow .fas {
+          position: relative;
+          top: -5px; }
+      .strategic-goals .goals .card-body ul li .status {
+        width: calc(30% - 218px);
+        text-align: center; }
+      .strategic-goals .goals .card-body ul li .link {
+        text-align: right;
+        width: 70px; }
+
+#strategic-plans-detailed-view {
+  margin-top: 26vh; }
+  #strategic-plans-detailed-view .back {
+    max-width: 80px;
+    cursor: pointer; }
+  #strategic-plans-detailed-view h2 {
+    color: #999;
+    font-size: 110%;
+    margin-top: 12px;
+    text-align: center; }
+  #strategic-plans-detailed-view h3 {
+    border-bottom: 2px solid #fff;
+    font-size: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    text-align: center; }
+  #strategic-plans-detailed-view .key-initiatives h3 {
+    border-color: #987ee5; }
+  #strategic-plans-detailed-view .key-initiatives .initiatives {
+    background-color: #e0e0e4;
+    padding: 15px 30px; }
+    #strategic-plans-detailed-view .key-initiatives .initiatives h4 {
+      margin-left: -10px; }
+      #strategic-plans-detailed-view .key-initiatives .initiatives h4::before {
+        content: ' ';
+        background-color: #987ee5;
+        height: 12px;
+        width: 12px;
+        display: inline-block;
+        position: relative;
+        left: -10px; }
+    #strategic-plans-detailed-view .key-initiatives .initiatives h5, #strategic-plans-detailed-view .key-initiatives .initiatives h4 {
+      font-size: 100%;
+      font-weight: bold; }
+    #strategic-plans-detailed-view .key-initiatives .initiatives p {
+      font-weight: bold;
+      font-size: 90%;
+      padding-top: 8px;
+      padding-bottom: 8px;
+      border-bottom: 1px dashed #b0acbd; }
+    #strategic-plans-detailed-view .key-initiatives .initiatives .risk-list {
+      list-style: none; }
+    #strategic-plans-detailed-view .key-initiatives .initiatives .status-list {
+      list-style: none; }
+      #strategic-plans-detailed-view .key-initiatives .initiatives .status-list li {
+        margin-bottom: 10px; }
+        #strategic-plans-detailed-view .key-initiatives .initiatives .status-list li div {
+          display: inline-block; }
+          #strategic-plans-detailed-view .key-initiatives .initiatives .status-list li div.up {
+            color: #54b758; }
+          #strategic-plans-detailed-view .key-initiatives .initiatives .status-list li div.down {
+            color: #9E9E9E; }
+          #strategic-plans-detailed-view .key-initiatives .initiatives .status-list li div.bi-directional {
+            color: #2196F3; }
+          #strategic-plans-detailed-view .key-initiatives .initiatives .status-list li div .fas {
+            position: relative;
+            top: 3px;
+            left: 2px;
+            font-size: 125%;
+            margin-right: 14px; }
+  #strategic-plans-detailed-view .linked-business h3 {
+    border-color: #26d8d2; }
+  #strategic-plans-detailed-view .linked-business span {
+    margin-left: 6px;
+    opacity: 0.5; }
+  #strategic-plans-detailed-view .linked-business table i {
+    font-size: 50%;
+    position: relative;
+    top: -2px;
+    left: 4px;
+    color: #999; }
+  #strategic-plans-detailed-view .linked-initiatives h3 {
+    border-color: #d7dddc; }
+  #strategic-plans-detailed-view .linked-initiatives span {
+    margin-left: 6px;
+    opacity: 0.5; }
+  #strategic-plans-detailed-view .linked-initiatives p {
+    padding-left: 45px;
+    font-size: 100%;
+    margin-bottom: 10px;
+    font-weight: bold; }
+    #strategic-plans-detailed-view .linked-initiatives p::before {
+      content: ' ';
+      background-color: #999;
+      width: 7px;
+      height: 7px;
+      display: inline-block;
+      position: absolute;
+      margin-left: -20px;
+      margin-top: 8px; }
 
 /*# sourceMappingURL=style.css.map */
