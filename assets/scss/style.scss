@@ -1,6 +1,7 @@
 @import 'mixins';
 @import 'switches';
 @import 'strategystate';
+@import 'globalinitiatives';
 $img : '../images/';
 
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600');
@@ -204,81 +205,7 @@ body{
       }
     }
     .card-body{
-      padding: 0 1.25rem;
-      background-color: #f3f3f4;
-      ul{
-        list-style: none;
-        display: block;
-        margin: 0;
-        padding: 0;
-        li{
-          background-color: #f3f3f4;
-          border-bottom: 1px solid #eaeaeb;
-          width: 100%;
-          display: flex;
-          font-size: 80%;
-          padding-top: 10px;
-          padding-bottom: 5px;
-          div{
-            float: left;
-          }
-          .number{
-            width: 60px;
-            min-width: 60px;
-            display: block;
-            height: 28px;
-            span{
-              background-color: #eaeaeb;
-              padding: 2px 8px;
-              position: absolute;
-              left: 0px;
-            }
-          }
-          .name{
-            width: calc(70% - 16px);
-          }
-          .state{
-            width: 54px;
-            text-align: center;
-            span{
-              font-size: 100%;
-              @extend .strategystate;
-              &::before{
-                top: 0px;
-              }
-              &::after{
-                top: -6px;
-              }
-            }
-          }
-          .arrow{
-            width: 40px;
-            text-align: center;
-            font-size: 175%;
-            &.up{
-              color: #54b758;
-            }
-            &.down{
-              color: #9E9E9E;
-            }
-            &.bi-directional{
-              color: #2196F3;
-            }
-            .fas{
-              position: relative;
-              top: -5px;
-            }
-          }
-          .status{
-            width: calc(30% - 218px);
-            text-align: center;
-          }
-          .link{
-            text-align: right;
-            width: 70px;
-          }
-        }
-      }
+      @extend .globalinitiatives;
     }
   }
 }
@@ -403,13 +330,239 @@ body{
       &::before{
         content: ' ';
         background-color: #999;
-        // border-radius: 50%;
         width: 7px;
         height: 7px;
         display: inline-block;
         position: absolute;
         margin-left: -20px;
         margin-top: 8px;
+      }
+    }
+  }
+}
+.anu-org-structure{
+  margin-top: 26vh;
+  .sidebar{
+    border-right: 1px dashed #DDD;
+    h4{
+      text-align: center;
+      font-size: 85%;
+      color: #999;
+      font-weight: normal;
+    }
+    .submenu{
+      list-style: none;
+      width: 100%;
+      margin: 0;
+      padding: 0px 20px 20px 20px;
+      li{
+        width: 100%;
+        h5{
+          width: 100%;
+          font-size: 90%;
+          color: white;
+          margin-bottom: 3px; cursor: pointer;
+          padding: 5px 10px;
+        }
+        h5[aria-expanded="false"]{
+          &::after{
+            content: '+';
+            position: absolute;
+            right: 50px;
+            margin-top: -2px;
+            font-size: 100%;
+          }
+        }
+        h5[aria-expanded="true"]{
+          &::after{
+            content: '-';
+            position: absolute;
+            right: 50px;
+            margin-top: -2px;
+            font-size: 100%;
+          }
+        }
+        .submenu-items{
+          list-style: none;
+          width: 100%;
+          background-color: #DDD;
+          padding: 5px;
+          margin: 0;
+          li{
+            font-size: 80%;
+            padding: 3px 2px;
+            background-color: #CCC;
+            margin-bottom: 3px; cursor: pointer;
+          }
+        }
+      }
+      &.purple{
+        li{
+          h5{
+            background-color: #8a81e3;
+          }
+        }
+      }
+      &.cyan{
+        li{
+          h5{
+            background-color: #00c5d5;
+          }
+        }
+      }
+    }
+  }
+  .initiatives{
+    overflow-x: hidden;
+    overflow-y: scroll;
+    .list{
+      @extend .globalinitiatives;
+      ul{
+        li{
+          .state {
+            width: 95px;
+          }
+          .arrow {
+            width: 75px;
+          }
+          .link {
+            width: 85px;
+          }
+        }
+      }
+    }
+    .card-head{
+      padding-left: 20px;
+      padding-right: 20px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      border-radius: 5px 5px 5px 5px;
+      background-color: white;
+      font-size: 90%;
+      .name{
+        width: 70%;
+        font-size: 100%;
+        display: inline-block;
+        float: left;
+      }
+      .columns{
+        width: 30%;
+        font-size: 100%;
+        display: inline-block;
+        float: left;
+        .status{
+          display: inline-block;
+          float: left;
+          width: 50%;
+          text-align: center;
+          font-weight: bold;
+        }
+        .trends{
+          display: inline-block;
+          float: left;
+          width: 50%;
+          font-weight: bold;
+        }
+      }
+    }
+    .details{
+      padding-top: 20px;
+      padding-left: 15px;
+      padding-right: 15px;
+      border-radius: .25rem;
+      position: relative;
+      left: calc(100%);
+      height: 0px;
+      animation-duration: 0.3s;
+      animation-fill-mode: forwards;
+      animation-delay: 0s;
+      animation-timing-function: ease-in-out;
+      animation-iteration-count: 1;
+      animation-play-state: running;
+      &.open{
+        animation-name: details-open;
+      }
+      &.close{
+        animation-name: details-close;
+      }
+      @keyframes details-open{
+        from{
+          left: calc(100%);
+          height: 0px;
+        }
+        to{
+          left: 0px;
+          height: auto;
+        }
+      }
+      @keyframes details-close{
+        from{
+          left: 0px;
+          height: auto;
+        }
+        to{
+          left: calc(100%);
+          height: 0px;
+        }
+      }
+      h5{
+        font-size: 90%;
+        span{
+          @extend .strategystate;
+          font-size: 100%;
+          position: relative;
+          top: -2px;
+          left: 34px;
+        }
+        b{
+          @extend .globalinitiatives-arrow;
+          background-color: transparent;
+          font-size: 100%;
+          position: relative;
+          top: 4px;
+          left: 20px;
+        }
+        small{
+          font-size: 90%;
+          color: #999;
+          font-weight: bold;
+          margin-left: 30px;
+          display: inline-block;
+        }
+      }
+      .aligned{
+        h5{
+          min-height: 50px;
+          margin-bottom: 0;
+          vertical-align: middle;
+        }
+      }
+      .suggestion{
+        margin-left: 0;
+        margin-left: 0;
+        .status{
+          width: 67%;
+        }
+      }
+      #close-anu-org-detail-view{
+        cursor: pointer;
+      }
+      p{
+        font-size: 90%;
+      }
+      li{
+        font-size: 90%;
+      }
+    }
+
+  }
+  .status-breakdown{
+    .state{
+      display: inline-block;
+      float: left;
+      margin-right: 20px;
+      span{
+        @extend .strategystate;
       }
     }
   }

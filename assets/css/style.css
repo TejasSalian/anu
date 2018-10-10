@@ -69,11 +69,11 @@ label.switch {
   padding: 8px 0px;
   color: white; }
 
-.strategystate, .strategic-goals .goals .card-header h5 .status-group .goal-stage span, .strategic-goals .goals .card-header #strategic-plans-detailed-view .key-initiatives .initiatives h4 .status-group .goal-stage span, #strategic-plans-detailed-view .key-initiatives .initiatives .strategic-goals .goals .card-header h4 .status-group .goal-stage span, .strategic-goals .goals .card-body ul li .state span, #strategic-plans-detailed-view .key-initiatives .initiatives .status-list li span {
+.strategystate, .globalinitiatives ul li .state span, .strategic-goals .goals .card-body ul li .state span, .anu-org-structure .initiatives .list ul li .state span, .strategic-goals .goals .card-header h5 .status-group .goal-stage span, .strategic-goals .goals .card-header #strategic-plans-detailed-view .key-initiatives .initiatives h4 .status-group .goal-stage span, #strategic-plans-detailed-view .key-initiatives .initiatives .strategic-goals .goals .card-header h4 .status-group .goal-stage span, #strategic-plans-detailed-view .key-initiatives .initiatives .status-list li span, .anu-org-structure .initiatives .details h5 span, .anu-org-structure #strategic-plans-detailed-view .key-initiatives .initiatives .details h4 span, #strategic-plans-detailed-view .key-initiatives .anu-org-structure .initiatives .details h4 span, .anu-org-structure .status-breakdown .state span {
   color: white;
   font-size: 85%;
   font-weight: 700; }
-  .strategystate::before, .strategic-goals .goals .card-header h5 .status-group .goal-stage span::before, .strategic-goals .goals .card-header #strategic-plans-detailed-view .key-initiatives .initiatives h4 .status-group .goal-stage span::before, #strategic-plans-detailed-view .key-initiatives .initiatives .strategic-goals .goals .card-header h4 .status-group .goal-stage span::before, .strategic-goals .goals .card-body ul li .state span::before, #strategic-plans-detailed-view .key-initiatives .initiatives .status-list li span::before {
+  .strategystate::before, .globalinitiatives ul li .state span::before, .strategic-goals .goals .card-body ul li .state span::before, .anu-org-structure .initiatives .list ul li .state span::before, .strategic-goals .goals .card-header h5 .status-group .goal-stage span::before, .strategic-goals .goals .card-header #strategic-plans-detailed-view .key-initiatives .initiatives h4 .status-group .goal-stage span::before, #strategic-plans-detailed-view .key-initiatives .initiatives .strategic-goals .goals .card-header h4 .status-group .goal-stage span::before, #strategic-plans-detailed-view .key-initiatives .initiatives .status-list li span::before, .anu-org-structure .initiatives .details h5 span::before, .anu-org-structure #strategic-plans-detailed-view .key-initiatives .initiatives .details h4 span::before, #strategic-plans-detailed-view .key-initiatives .anu-org-structure .initiatives .details h4 span::before, .anu-org-structure .status-breakdown .state span::before {
     content: ' ';
     width: 22px;
     height: 22px;
@@ -81,33 +81,93 @@ label.switch {
     display: inline-block;
     position: relative;
     top: 6px; }
-  .strategystate::after, .strategic-goals .goals .card-header h5 .status-group .goal-stage span::after, .strategic-goals .goals .card-header #strategic-plans-detailed-view .key-initiatives .initiatives h4 .status-group .goal-stage span::after, #strategic-plans-detailed-view .key-initiatives .initiatives .strategic-goals .goals .card-header h4 .status-group .goal-stage span::after, .strategic-goals .goals .card-body ul li .state span::after, #strategic-plans-detailed-view .key-initiatives .initiatives .status-list li span::after {
+  .strategystate::after, .globalinitiatives ul li .state span::after, .strategic-goals .goals .card-body ul li .state span::after, .anu-org-structure .initiatives .list ul li .state span::after, .strategic-goals .goals .card-header h5 .status-group .goal-stage span::after, .strategic-goals .goals .card-header #strategic-plans-detailed-view .key-initiatives .initiatives h4 .status-group .goal-stage span::after, #strategic-plans-detailed-view .key-initiatives .initiatives .strategic-goals .goals .card-header h4 .status-group .goal-stage span::after, #strategic-plans-detailed-view .key-initiatives .initiatives .status-list li span::after, .anu-org-structure .initiatives .details h5 span::after, .anu-org-structure #strategic-plans-detailed-view .key-initiatives .initiatives .details h4 span::after, #strategic-plans-detailed-view .key-initiatives .anu-org-structure .initiatives .details h4 span::after, .anu-org-structure .status-breakdown .state span::after {
     position: relative;
     left: -16px;
     top: 0px;
     font-size: 100%; }
-  .strategystate.good::before, .strategic-goals .goals .card-header h5 .status-group .goal-stage span.good::before, .strategic-goals .goals .card-header #strategic-plans-detailed-view .key-initiatives .initiatives h4 .status-group .goal-stage span.good::before, #strategic-plans-detailed-view .key-initiatives .initiatives .strategic-goals .goals .card-header h4 .status-group .goal-stage span.good::before, .strategic-goals .goals .card-body ul li .state span.good::before, #strategic-plans-detailed-view .key-initiatives .initiatives .status-list li span.good::before {
+  .strategystate.good::before, .globalinitiatives ul li .state span.good::before, .strategic-goals .goals .card-body ul li .state span.good::before, .anu-org-structure .initiatives .list ul li .state span.good::before, .strategic-goals .goals .card-header h5 .status-group .goal-stage span.good::before, .strategic-goals .goals .card-header #strategic-plans-detailed-view .key-initiatives .initiatives h4 .status-group .goal-stage span.good::before, #strategic-plans-detailed-view .key-initiatives .initiatives .strategic-goals .goals .card-header h4 .status-group .goal-stage span.good::before, #strategic-plans-detailed-view .key-initiatives .initiatives .status-list li span.good::before, .anu-org-structure .initiatives .details h5 span.good::before, .anu-org-structure #strategic-plans-detailed-view .key-initiatives .initiatives .details h4 span.good::before, #strategic-plans-detailed-view .key-initiatives .anu-org-structure .initiatives .details h4 span.good::before, .anu-org-structure .status-breakdown .state span.good::before {
     background-color: #54b758; }
-  .strategystate.good::after, .strategic-goals .goals .card-header h5 .status-group .goal-stage span.good::after, .strategic-goals .goals .card-header #strategic-plans-detailed-view .key-initiatives .initiatives h4 .status-group .goal-stage span.good::after, #strategic-plans-detailed-view .key-initiatives .initiatives .strategic-goals .goals .card-header h4 .status-group .goal-stage span.good::after, .strategic-goals .goals .card-body ul li .state span.good::after, #strategic-plans-detailed-view .key-initiatives .initiatives .status-list li span.good::after {
+  .strategystate.good::after, .globalinitiatives ul li .state span.good::after, .strategic-goals .goals .card-body ul li .state span.good::after, .anu-org-structure .initiatives .list ul li .state span.good::after, .strategic-goals .goals .card-header h5 .status-group .goal-stage span.good::after, .strategic-goals .goals .card-header #strategic-plans-detailed-view .key-initiatives .initiatives h4 .status-group .goal-stage span.good::after, #strategic-plans-detailed-view .key-initiatives .initiatives .strategic-goals .goals .card-header h4 .status-group .goal-stage span.good::after, #strategic-plans-detailed-view .key-initiatives .initiatives .status-list li span.good::after, .anu-org-structure .initiatives .details h5 span.good::after, .anu-org-structure #strategic-plans-detailed-view .key-initiatives .initiatives .details h4 span.good::after, #strategic-plans-detailed-view .key-initiatives .anu-org-structure .initiatives .details h4 span.good::after, .anu-org-structure .status-breakdown .state span.good::after {
     content: "G"; }
-  .strategystate.danger::before, .strategic-goals .goals .card-header h5 .status-group .goal-stage span.danger::before, .strategic-goals .goals .card-header #strategic-plans-detailed-view .key-initiatives .initiatives h4 .status-group .goal-stage span.danger::before, #strategic-plans-detailed-view .key-initiatives .initiatives .strategic-goals .goals .card-header h4 .status-group .goal-stage span.danger::before, .strategic-goals .goals .card-body ul li .state span.danger::before, #strategic-plans-detailed-view .key-initiatives .initiatives .status-list li span.danger::before {
+  .strategystate.danger::before, .globalinitiatives ul li .state span.danger::before, .strategic-goals .goals .card-body ul li .state span.danger::before, .anu-org-structure .initiatives .list ul li .state span.danger::before, .strategic-goals .goals .card-header h5 .status-group .goal-stage span.danger::before, .strategic-goals .goals .card-header #strategic-plans-detailed-view .key-initiatives .initiatives h4 .status-group .goal-stage span.danger::before, #strategic-plans-detailed-view .key-initiatives .initiatives .strategic-goals .goals .card-header h4 .status-group .goal-stage span.danger::before, #strategic-plans-detailed-view .key-initiatives .initiatives .status-list li span.danger::before, .anu-org-structure .initiatives .details h5 span.danger::before, .anu-org-structure #strategic-plans-detailed-view .key-initiatives .initiatives .details h4 span.danger::before, #strategic-plans-detailed-view .key-initiatives .anu-org-structure .initiatives .details h4 span.danger::before, .anu-org-structure .status-breakdown .state span.danger::before {
     background-color: #FF5722; }
-  .strategystate.danger::after, .strategic-goals .goals .card-header h5 .status-group .goal-stage span.danger::after, .strategic-goals .goals .card-header #strategic-plans-detailed-view .key-initiatives .initiatives h4 .status-group .goal-stage span.danger::after, #strategic-plans-detailed-view .key-initiatives .initiatives .strategic-goals .goals .card-header h4 .status-group .goal-stage span.danger::after, .strategic-goals .goals .card-body ul li .state span.danger::after, #strategic-plans-detailed-view .key-initiatives .initiatives .status-list li span.danger::after {
+  .strategystate.danger::after, .globalinitiatives ul li .state span.danger::after, .strategic-goals .goals .card-body ul li .state span.danger::after, .anu-org-structure .initiatives .list ul li .state span.danger::after, .strategic-goals .goals .card-header h5 .status-group .goal-stage span.danger::after, .strategic-goals .goals .card-header #strategic-plans-detailed-view .key-initiatives .initiatives h4 .status-group .goal-stage span.danger::after, #strategic-plans-detailed-view .key-initiatives .initiatives .strategic-goals .goals .card-header h4 .status-group .goal-stage span.danger::after, #strategic-plans-detailed-view .key-initiatives .initiatives .status-list li span.danger::after, .anu-org-structure .initiatives .details h5 span.danger::after, .anu-org-structure #strategic-plans-detailed-view .key-initiatives .initiatives .details h4 span.danger::after, #strategic-plans-detailed-view .key-initiatives .anu-org-structure .initiatives .details h4 span.danger::after, .anu-org-structure .status-breakdown .state span.danger::after {
     content: "A"; }
-  .strategystate.warning::before, .strategic-goals .goals .card-header h5 .status-group .goal-stage span.warning::before, .strategic-goals .goals .card-header #strategic-plans-detailed-view .key-initiatives .initiatives h4 .status-group .goal-stage span.warning::before, #strategic-plans-detailed-view .key-initiatives .initiatives .strategic-goals .goals .card-header h4 .status-group .goal-stage span.warning::before, .strategic-goals .goals .card-body ul li .state span.warning::before, #strategic-plans-detailed-view .key-initiatives .initiatives .status-list li span.warning::before {
+  .strategystate.warning::before, .globalinitiatives ul li .state span.warning::before, .strategic-goals .goals .card-body ul li .state span.warning::before, .anu-org-structure .initiatives .list ul li .state span.warning::before, .strategic-goals .goals .card-header h5 .status-group .goal-stage span.warning::before, .strategic-goals .goals .card-header #strategic-plans-detailed-view .key-initiatives .initiatives h4 .status-group .goal-stage span.warning::before, #strategic-plans-detailed-view .key-initiatives .initiatives .strategic-goals .goals .card-header h4 .status-group .goal-stage span.warning::before, #strategic-plans-detailed-view .key-initiatives .initiatives .status-list li span.warning::before, .anu-org-structure .initiatives .details h5 span.warning::before, .anu-org-structure #strategic-plans-detailed-view .key-initiatives .initiatives .details h4 span.warning::before, #strategic-plans-detailed-view .key-initiatives .anu-org-structure .initiatives .details h4 span.warning::before, .anu-org-structure .status-breakdown .state span.warning::before {
     background-color: orange; }
-  .strategystate.warning::after, .strategic-goals .goals .card-header h5 .status-group .goal-stage span.warning::after, .strategic-goals .goals .card-header #strategic-plans-detailed-view .key-initiatives .initiatives h4 .status-group .goal-stage span.warning::after, #strategic-plans-detailed-view .key-initiatives .initiatives .strategic-goals .goals .card-header h4 .status-group .goal-stage span.warning::after, .strategic-goals .goals .card-body ul li .state span.warning::after, #strategic-plans-detailed-view .key-initiatives .initiatives .status-list li span.warning::after {
+  .strategystate.warning::after, .globalinitiatives ul li .state span.warning::after, .strategic-goals .goals .card-body ul li .state span.warning::after, .anu-org-structure .initiatives .list ul li .state span.warning::after, .strategic-goals .goals .card-header h5 .status-group .goal-stage span.warning::after, .strategic-goals .goals .card-header #strategic-plans-detailed-view .key-initiatives .initiatives h4 .status-group .goal-stage span.warning::after, #strategic-plans-detailed-view .key-initiatives .initiatives .strategic-goals .goals .card-header h4 .status-group .goal-stage span.warning::after, #strategic-plans-detailed-view .key-initiatives .initiatives .status-list li span.warning::after, .anu-org-structure .initiatives .details h5 span.warning::after, .anu-org-structure #strategic-plans-detailed-view .key-initiatives .initiatives .details h4 span.warning::after, #strategic-plans-detailed-view .key-initiatives .anu-org-structure .initiatives .details h4 span.warning::after, .anu-org-structure .status-breakdown .state span.warning::after {
     content: "R"; }
-  .strategystate.info::before, .strategic-goals .goals .card-header h5 .status-group .goal-stage span.info::before, .strategic-goals .goals .card-header #strategic-plans-detailed-view .key-initiatives .initiatives h4 .status-group .goal-stage span.info::before, #strategic-plans-detailed-view .key-initiatives .initiatives .strategic-goals .goals .card-header h4 .status-group .goal-stage span.info::before, .strategic-goals .goals .card-body ul li .state span.info::before, #strategic-plans-detailed-view .key-initiatives .initiatives .status-list li span.info::before {
+  .strategystate.info::before, .globalinitiatives ul li .state span.info::before, .strategic-goals .goals .card-body ul li .state span.info::before, .anu-org-structure .initiatives .list ul li .state span.info::before, .strategic-goals .goals .card-header h5 .status-group .goal-stage span.info::before, .strategic-goals .goals .card-header #strategic-plans-detailed-view .key-initiatives .initiatives h4 .status-group .goal-stage span.info::before, #strategic-plans-detailed-view .key-initiatives .initiatives .strategic-goals .goals .card-header h4 .status-group .goal-stage span.info::before, #strategic-plans-detailed-view .key-initiatives .initiatives .status-list li span.info::before, .anu-org-structure .initiatives .details h5 span.info::before, .anu-org-structure #strategic-plans-detailed-view .key-initiatives .initiatives .details h4 span.info::before, #strategic-plans-detailed-view .key-initiatives .anu-org-structure .initiatives .details h4 span.info::before, .anu-org-structure .status-breakdown .state span.info::before {
     background-color: #2196F3; }
-  .strategystate.info::after, .strategic-goals .goals .card-header h5 .status-group .goal-stage span.info::after, .strategic-goals .goals .card-header #strategic-plans-detailed-view .key-initiatives .initiatives h4 .status-group .goal-stage span.info::after, #strategic-plans-detailed-view .key-initiatives .initiatives .strategic-goals .goals .card-header h4 .status-group .goal-stage span.info::after, .strategic-goals .goals .card-body ul li .state span.info::after, #strategic-plans-detailed-view .key-initiatives .initiatives .status-list li span.info::after {
+  .strategystate.info::after, .globalinitiatives ul li .state span.info::after, .strategic-goals .goals .card-body ul li .state span.info::after, .anu-org-structure .initiatives .list ul li .state span.info::after, .strategic-goals .goals .card-header h5 .status-group .goal-stage span.info::after, .strategic-goals .goals .card-header #strategic-plans-detailed-view .key-initiatives .initiatives h4 .status-group .goal-stage span.info::after, #strategic-plans-detailed-view .key-initiatives .initiatives .strategic-goals .goals .card-header h4 .status-group .goal-stage span.info::after, #strategic-plans-detailed-view .key-initiatives .initiatives .status-list li span.info::after, .anu-org-structure .initiatives .details h5 span.info::after, .anu-org-structure #strategic-plans-detailed-view .key-initiatives .initiatives .details h4 span.info::after, #strategic-plans-detailed-view .key-initiatives .anu-org-structure .initiatives .details h4 span.info::after, .anu-org-structure .status-breakdown .state span.info::after {
     content: "C"; }
-  .strategystate.not-available::before, .strategic-goals .goals .card-header h5 .status-group .goal-stage span.not-available::before, .strategic-goals .goals .card-header #strategic-plans-detailed-view .key-initiatives .initiatives h4 .status-group .goal-stage span.not-available::before, #strategic-plans-detailed-view .key-initiatives .initiatives .strategic-goals .goals .card-header h4 .status-group .goal-stage span.not-available::before, .strategic-goals .goals .card-body ul li .state span.not-available::before, #strategic-plans-detailed-view .key-initiatives .initiatives .status-list li span.not-available::before {
+  .strategystate.not-available::before, .globalinitiatives ul li .state span.not-available::before, .strategic-goals .goals .card-body ul li .state span.not-available::before, .anu-org-structure .initiatives .list ul li .state span.not-available::before, .strategic-goals .goals .card-header h5 .status-group .goal-stage span.not-available::before, .strategic-goals .goals .card-header #strategic-plans-detailed-view .key-initiatives .initiatives h4 .status-group .goal-stage span.not-available::before, #strategic-plans-detailed-view .key-initiatives .initiatives .strategic-goals .goals .card-header h4 .status-group .goal-stage span.not-available::before, #strategic-plans-detailed-view .key-initiatives .initiatives .status-list li span.not-available::before, .anu-org-structure .initiatives .details h5 span.not-available::before, .anu-org-structure #strategic-plans-detailed-view .key-initiatives .initiatives .details h4 span.not-available::before, #strategic-plans-detailed-view .key-initiatives .anu-org-structure .initiatives .details h4 span.not-available::before, .anu-org-structure .status-breakdown .state span.not-available::before {
     background-color: #ffffff4a;
     border: 1px solid #b2b5b7; }
-  .strategystate.not-available::after, .strategic-goals .goals .card-header h5 .status-group .goal-stage span.not-available::after, .strategic-goals .goals .card-header #strategic-plans-detailed-view .key-initiatives .initiatives h4 .status-group .goal-stage span.not-available::after, #strategic-plans-detailed-view .key-initiatives .initiatives .strategic-goals .goals .card-header h4 .status-group .goal-stage span.not-available::after, .strategic-goals .goals .card-body ul li .state span.not-available::after, #strategic-plans-detailed-view .key-initiatives .initiatives .status-list li span.not-available::after {
+  .strategystate.not-available::after, .globalinitiatives ul li .state span.not-available::after, .strategic-goals .goals .card-body ul li .state span.not-available::after, .anu-org-structure .initiatives .list ul li .state span.not-available::after, .strategic-goals .goals .card-header h5 .status-group .goal-stage span.not-available::after, .strategic-goals .goals .card-header #strategic-plans-detailed-view .key-initiatives .initiatives h4 .status-group .goal-stage span.not-available::after, #strategic-plans-detailed-view .key-initiatives .initiatives .strategic-goals .goals .card-header h4 .status-group .goal-stage span.not-available::after, #strategic-plans-detailed-view .key-initiatives .initiatives .status-list li span.not-available::after, .anu-org-structure .initiatives .details h5 span.not-available::after, .anu-org-structure #strategic-plans-detailed-view .key-initiatives .initiatives .details h4 span.not-available::after, #strategic-plans-detailed-view .key-initiatives .anu-org-structure .initiatives .details h4 span.not-available::after, .anu-org-structure .status-breakdown .state span.not-available::after {
     content: "O";
     color: #fff0; }
+
+.globalinitiatives, .strategic-goals .goals .card-body, .anu-org-structure .initiatives .list {
+  padding: 0 1.25rem;
+  background-color: #f3f3f4; }
+  .globalinitiatives ul, .strategic-goals .goals .card-body ul, .anu-org-structure .initiatives .list ul {
+    list-style: none;
+    display: block;
+    margin: 0;
+    padding: 0; }
+    .globalinitiatives ul li, .strategic-goals .goals .card-body ul li, .anu-org-structure .initiatives .list ul li {
+      background-color: #f3f3f4;
+      border-bottom: 1px solid #eaeaeb;
+      width: 100%;
+      display: flex;
+      font-size: 80%;
+      padding-top: 10px;
+      padding-bottom: 5px; }
+      .globalinitiatives ul li div, .strategic-goals .goals .card-body ul li div, .anu-org-structure .initiatives .list ul li div {
+        float: left; }
+      .globalinitiatives ul li .number, .strategic-goals .goals .card-body ul li .number, .anu-org-structure .initiatives .list ul li .number {
+        width: 60px;
+        min-width: 60px;
+        display: block;
+        height: 28px; }
+        .globalinitiatives ul li .number span, .strategic-goals .goals .card-body ul li .number span, .anu-org-structure .initiatives .list ul li .number span {
+          background-color: #eaeaeb;
+          padding: 2px 8px;
+          position: absolute;
+          left: 0px; }
+      .globalinitiatives ul li .name, .strategic-goals .goals .card-body ul li .name, .anu-org-structure .initiatives .list ul li .name {
+        width: calc(70% - 16px); }
+      .globalinitiatives ul li .state, .strategic-goals .goals .card-body ul li .state, .anu-org-structure .initiatives .list ul li .state {
+        width: 54px;
+        text-align: center; }
+        .globalinitiatives ul li .state span, .strategic-goals .goals .card-body ul li .state span, .anu-org-structure .initiatives .list ul li .state span {
+          font-size: 100%; }
+          .globalinitiatives ul li .state span::before, .strategic-goals .goals .card-body ul li .state span::before, .anu-org-structure .initiatives .list ul li .state span::before {
+            top: 0px; }
+          .globalinitiatives ul li .state span::after, .strategic-goals .goals .card-body ul li .state span::after, .anu-org-structure .initiatives .list ul li .state span::after {
+            top: -6px; }
+      .globalinitiatives ul li .status, .strategic-goals .goals .card-body ul li .status, .anu-org-structure .initiatives .list ul li .status {
+        width: calc(30% - 218px);
+        text-align: center; }
+      .globalinitiatives ul li .link, .strategic-goals .goals .card-body ul li .link, .anu-org-structure .initiatives .list ul li .link {
+        text-align: right;
+        width: 70px; }
+
+.globalinitiatives-arrow, .globalinitiatives ul li .arrow, .strategic-goals .goals .card-body ul li .arrow, .anu-org-structure .initiatives .list ul li .arrow, .anu-org-structure .initiatives .details h5 b, .anu-org-structure #strategic-plans-detailed-view .key-initiatives .initiatives .details h4 b, #strategic-plans-detailed-view .key-initiatives .anu-org-structure .initiatives .details h4 b {
+  width: 40px;
+  text-align: center;
+  font-size: 175%; }
+  .globalinitiatives-arrow.up, .globalinitiatives ul li .up.arrow, .strategic-goals .goals .card-body ul li .up.arrow, .anu-org-structure .initiatives .list ul li .up.arrow, .anu-org-structure .initiatives .details h5 b.up, .anu-org-structure #strategic-plans-detailed-view .key-initiatives .initiatives .details h4 b.up, #strategic-plans-detailed-view .key-initiatives .anu-org-structure .initiatives .details h4 b.up {
+    color: #54b758; }
+  .globalinitiatives-arrow.down, .globalinitiatives ul li .down.arrow, .strategic-goals .goals .card-body ul li .down.arrow, .anu-org-structure .initiatives .list ul li .down.arrow, .anu-org-structure .initiatives .details h5 b.down, .anu-org-structure #strategic-plans-detailed-view .key-initiatives .initiatives .details h4 b.down, #strategic-plans-detailed-view .key-initiatives .anu-org-structure .initiatives .details h4 b.down {
+    color: #9E9E9E; }
+  .globalinitiatives-arrow.bi-directional, .globalinitiatives ul li .bi-directional.arrow, .strategic-goals .goals .card-body ul li .bi-directional.arrow, .anu-org-structure .initiatives .list ul li .bi-directional.arrow, .anu-org-structure .initiatives .details h5 b.bi-directional, .anu-org-structure #strategic-plans-detailed-view .key-initiatives .initiatives .details h4 b.bi-directional, #strategic-plans-detailed-view .key-initiatives .anu-org-structure .initiatives .details h4 b.bi-directional {
+    color: #2196F3; }
+  .globalinitiatives-arrow .fas, .globalinitiatives ul li .arrow .fas, .strategic-goals .goals .card-body ul li .arrow .fas, .anu-org-structure .initiatives .list ul li .arrow .fas, .anu-org-structure .initiatives .details h5 b .fas, .anu-org-structure #strategic-plans-detailed-view .key-initiatives .initiatives .details h4 b .fas, #strategic-plans-detailed-view .key-initiatives .anu-org-structure .initiatives .details h4 b .fas {
+    position: relative;
+    top: -5px; }
 
 body {
   font-family: 'Montserrat', sans-serif;
@@ -268,64 +328,6 @@ body {
     transform: rotateZ(0deg); }
   .strategic-goals .goals .card-header h5[aria-expanded="true"] .collapse-state, .strategic-goals .goals .card-header #strategic-plans-detailed-view .key-initiatives .initiatives h4[aria-expanded="true"] .collapse-state, #strategic-plans-detailed-view .key-initiatives .initiatives .strategic-goals .goals .card-header h4[aria-expanded="true"] .collapse-state {
     transform: rotateZ(90deg); }
-.strategic-goals .goals .card-body {
-  padding: 0 1.25rem;
-  background-color: #f3f3f4; }
-  .strategic-goals .goals .card-body ul {
-    list-style: none;
-    display: block;
-    margin: 0;
-    padding: 0; }
-    .strategic-goals .goals .card-body ul li {
-      background-color: #f3f3f4;
-      border-bottom: 1px solid #eaeaeb;
-      width: 100%;
-      display: flex;
-      font-size: 80%;
-      padding-top: 10px;
-      padding-bottom: 5px; }
-      .strategic-goals .goals .card-body ul li div {
-        float: left; }
-      .strategic-goals .goals .card-body ul li .number {
-        width: 60px;
-        min-width: 60px;
-        display: block;
-        height: 28px; }
-        .strategic-goals .goals .card-body ul li .number span {
-          background-color: #eaeaeb;
-          padding: 2px 8px;
-          position: absolute;
-          left: 0px; }
-      .strategic-goals .goals .card-body ul li .name {
-        width: calc(70% - 16px); }
-      .strategic-goals .goals .card-body ul li .state {
-        width: 54px;
-        text-align: center; }
-        .strategic-goals .goals .card-body ul li .state span {
-          font-size: 100%; }
-          .strategic-goals .goals .card-body ul li .state span::before {
-            top: 0px; }
-          .strategic-goals .goals .card-body ul li .state span::after {
-            top: -6px; }
-      .strategic-goals .goals .card-body ul li .arrow {
-        width: 40px;
-        text-align: center;
-        font-size: 175%; }
-        .strategic-goals .goals .card-body ul li .arrow.up {
-          color: #54b758; }
-        .strategic-goals .goals .card-body ul li .arrow.down {
-          color: #9E9E9E; }
-        .strategic-goals .goals .card-body ul li .arrow.bi-directional {
-          color: #2196F3; }
-        .strategic-goals .goals .card-body ul li .arrow .fas {
-          position: relative;
-          top: -5px; }
-      .strategic-goals .goals .card-body ul li .status {
-        width: calc(30% - 218px);
-        text-align: center; }
-      .strategic-goals .goals .card-body ul li .link {
-        text-align: right;
-        width: 70px; }
 
 #strategic-plans-detailed-view {
   margin-top: 26vh; }
@@ -418,5 +420,165 @@ body {
       position: absolute;
       margin-left: -20px;
       margin-top: 8px; }
+
+.anu-org-structure {
+  margin-top: 26vh; }
+  .anu-org-structure .sidebar {
+    border-right: 1px dashed #DDD; }
+    .anu-org-structure .sidebar h4 {
+      text-align: center;
+      font-size: 85%;
+      color: #999;
+      font-weight: normal; }
+    .anu-org-structure .sidebar .submenu {
+      list-style: none;
+      width: 100%;
+      margin: 0;
+      padding: 0px 20px 20px 20px; }
+      .anu-org-structure .sidebar .submenu li {
+        width: 100%; }
+        .anu-org-structure .sidebar .submenu li h5, .anu-org-structure .sidebar .submenu li #strategic-plans-detailed-view .key-initiatives .initiatives h4, #strategic-plans-detailed-view .key-initiatives .initiatives .anu-org-structure .sidebar .submenu li h4 {
+          width: 100%;
+          font-size: 90%;
+          color: white;
+          margin-bottom: 3px;
+          cursor: pointer;
+          padding: 5px 10px; }
+        .anu-org-structure .sidebar .submenu li h5[aria-expanded="false"]::after, .anu-org-structure .sidebar .submenu li #strategic-plans-detailed-view .key-initiatives .initiatives h4[aria-expanded="false"]::after, #strategic-plans-detailed-view .key-initiatives .initiatives .anu-org-structure .sidebar .submenu li h4[aria-expanded="false"]::after {
+          content: '+';
+          position: absolute;
+          right: 50px;
+          margin-top: -2px;
+          font-size: 100%; }
+        .anu-org-structure .sidebar .submenu li h5[aria-expanded="true"]::after, .anu-org-structure .sidebar .submenu li #strategic-plans-detailed-view .key-initiatives .initiatives h4[aria-expanded="true"]::after, #strategic-plans-detailed-view .key-initiatives .initiatives .anu-org-structure .sidebar .submenu li h4[aria-expanded="true"]::after {
+          content: '-';
+          position: absolute;
+          right: 50px;
+          margin-top: -2px;
+          font-size: 100%; }
+        .anu-org-structure .sidebar .submenu li .submenu-items {
+          list-style: none;
+          width: 100%;
+          background-color: #DDD;
+          padding: 5px;
+          margin: 0; }
+          .anu-org-structure .sidebar .submenu li .submenu-items li {
+            font-size: 80%;
+            padding: 3px 2px;
+            background-color: #CCC;
+            margin-bottom: 3px;
+            cursor: pointer; }
+      .anu-org-structure .sidebar .submenu.purple li h5, .anu-org-structure .sidebar .submenu.purple li #strategic-plans-detailed-view .key-initiatives .initiatives h4, #strategic-plans-detailed-view .key-initiatives .initiatives .anu-org-structure .sidebar .submenu.purple li h4 {
+        background-color: #8a81e3; }
+      .anu-org-structure .sidebar .submenu.cyan li h5, .anu-org-structure .sidebar .submenu.cyan li #strategic-plans-detailed-view .key-initiatives .initiatives h4, #strategic-plans-detailed-view .key-initiatives .initiatives .anu-org-structure .sidebar .submenu.cyan li h4 {
+        background-color: #00c5d5; }
+  .anu-org-structure .initiatives {
+    overflow-x: hidden;
+    overflow-y: scroll; }
+    .anu-org-structure .initiatives .list ul li .state {
+      width: 95px; }
+    .anu-org-structure .initiatives .list ul li .arrow {
+      width: 75px; }
+    .anu-org-structure .initiatives .list ul li .link {
+      width: 85px; }
+    .anu-org-structure .initiatives .card-head {
+      padding-left: 20px;
+      padding-right: 20px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      border-radius: 5px 5px 5px 5px;
+      background-color: white;
+      font-size: 90%; }
+      .anu-org-structure .initiatives .card-head .name {
+        width: 70%;
+        font-size: 100%;
+        display: inline-block;
+        float: left; }
+      .anu-org-structure .initiatives .card-head .columns {
+        width: 30%;
+        font-size: 100%;
+        display: inline-block;
+        float: left; }
+        .anu-org-structure .initiatives .card-head .columns .status {
+          display: inline-block;
+          float: left;
+          width: 50%;
+          text-align: center;
+          font-weight: bold; }
+        .anu-org-structure .initiatives .card-head .columns .trends {
+          display: inline-block;
+          float: left;
+          width: 50%;
+          font-weight: bold; }
+    .anu-org-structure .initiatives .details {
+      padding-top: 20px;
+      padding-left: 15px;
+      padding-right: 15px;
+      border-radius: .25rem;
+      position: relative;
+      left: calc(100%);
+      height: 0px;
+      animation-duration: 0.3s;
+      animation-fill-mode: forwards;
+      animation-delay: 0s;
+      animation-timing-function: ease-in-out;
+      animation-iteration-count: 1;
+      animation-play-state: running; }
+      .anu-org-structure .initiatives .details.open {
+        animation-name: details-open; }
+      .anu-org-structure .initiatives .details.close {
+        animation-name: details-close; }
+@keyframes details-open {
+  from {
+    left: calc(100%);
+    height: 0px; }
+  to {
+    left: 0px;
+    height: auto; } }
+@keyframes details-close {
+  from {
+    left: 0px;
+    height: auto; }
+  to {
+    left: calc(100%);
+    height: 0px; } }
+      .anu-org-structure .initiatives .details h5, .anu-org-structure #strategic-plans-detailed-view .key-initiatives .initiatives .details h4, #strategic-plans-detailed-view .key-initiatives .anu-org-structure .initiatives .details h4 {
+        font-size: 90%; }
+        .anu-org-structure .initiatives .details h5 span, .anu-org-structure #strategic-plans-detailed-view .key-initiatives .initiatives .details h4 span, #strategic-plans-detailed-view .key-initiatives .anu-org-structure .initiatives .details h4 span {
+          font-size: 100%;
+          position: relative;
+          top: -2px;
+          left: 34px; }
+        .anu-org-structure .initiatives .details h5 b, .anu-org-structure #strategic-plans-detailed-view .key-initiatives .initiatives .details h4 b, #strategic-plans-detailed-view .key-initiatives .anu-org-structure .initiatives .details h4 b {
+          background-color: transparent;
+          font-size: 100%;
+          position: relative;
+          top: 4px;
+          left: 20px; }
+        .anu-org-structure .initiatives .details h5 small, .anu-org-structure #strategic-plans-detailed-view .key-initiatives .initiatives .details h4 small, #strategic-plans-detailed-view .key-initiatives .anu-org-structure .initiatives .details h4 small {
+          font-size: 90%;
+          color: #999;
+          font-weight: bold;
+          margin-left: 30px;
+          display: inline-block; }
+      .anu-org-structure .initiatives .details .aligned h5, .anu-org-structure #strategic-plans-detailed-view .key-initiatives .initiatives .details .aligned h4, #strategic-plans-detailed-view .key-initiatives .anu-org-structure .initiatives .details .aligned h4 {
+        min-height: 50px;
+        margin-bottom: 0;
+        vertical-align: middle; }
+      .anu-org-structure .initiatives .details .suggestion {
+        margin-left: 0;
+        margin-left: 0; }
+        .anu-org-structure .initiatives .details .suggestion .status {
+          width: 67%; }
+      .anu-org-structure .initiatives .details #close-anu-org-detail-view {
+        cursor: pointer; }
+      .anu-org-structure .initiatives .details p {
+        font-size: 90%; }
+      .anu-org-structure .initiatives .details li {
+        font-size: 90%; }
+  .anu-org-structure .status-breakdown .state {
+    display: inline-block;
+    float: left;
+    margin-right: 20px; }
 
 /*# sourceMappingURL=style.css.map */

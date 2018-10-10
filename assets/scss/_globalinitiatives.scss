@@ -1,0 +1,80 @@
+.globalinitiatives{
+  padding: 0 1.25rem;
+  background-color: #f3f3f4;
+  ul{
+    list-style: none;
+    display: block;
+    margin: 0;
+    padding: 0;
+    li{
+      background-color: #f3f3f4;
+      border-bottom: 1px solid #eaeaeb;
+      width: 100%;
+      display: flex;
+      font-size: 80%;
+      padding-top: 10px;
+      padding-bottom: 5px;
+      div{
+        float: left;
+      }
+      .number{
+        width: 60px;
+        min-width: 60px;
+        display: block;
+        height: 28px;
+        span{
+          background-color: #eaeaeb;
+          padding: 2px 8px;
+          position: absolute;
+          left: 0px;
+        }
+      }
+      .name{
+        width: calc(70% - 16px);
+      }
+      .state{
+        width: 54px;
+        text-align: center;
+        span{
+          font-size: 100%;
+          @extend .strategystate;
+          &::before{
+            top: 0px;
+          }
+          &::after{
+            top: -6px;
+          }
+        }
+      }
+      .arrow{
+        @extend .globalinitiatives-arrow;
+      }
+      .status{
+        width: calc(30% - 218px);
+        text-align: center;
+      }
+      .link{
+        text-align: right;
+        width: 70px;
+      }
+    }
+  }
+}
+.globalinitiatives-arrow{
+  width: 40px;
+  text-align: center;
+  font-size: 175%;
+  &.up{
+    color: #54b758;
+  }
+  &.down{
+    color: #9E9E9E;
+  }
+  &.bi-directional{
+    color: #2196F3;
+  }
+  .fas{
+    position: relative;
+    top: -5px;
+  }
+}
