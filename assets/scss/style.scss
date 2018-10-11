@@ -518,3 +518,42 @@ body{
     }
   }
 }
+.planning-page{
+  margin-top: 26vh;
+  h6{
+    text-align: left;
+    font-size: 100%;
+    color: #888;
+    margin-top: 6px;
+  }
+  .filters{
+    select, label{
+      font-size: 85%;
+      text-align: right;
+    }
+    .ps-5{
+      padding: 0 5px;
+    }
+    label.ps-5{
+      padding-top: 10px;
+    }
+    .col-8.ps-5{
+      padding-right: 15px;
+    }
+    .form-control{
+      border-radius: 0;
+    }
+  }
+  .budgeting-cycle{
+    .goals{
+      @extend .goals-model;
+      .goal-number{
+        .fas{
+          font-size: 50%;
+          margin-top: 5px;
+          display: block;
+        }
+      }
+    }
+  }
+}

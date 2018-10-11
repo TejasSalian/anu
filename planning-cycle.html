@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="./assets/css/animate.css">
   <link rel="stylesheet" href="./assets/css/style.css">
 
-  <title>Timeline - Australian National University</title>
+  <title>Planning Cycle - Australian National University</title>
 </head>
 <body>
 
@@ -29,10 +29,10 @@
               <li class="nav-item">
                 <a class="nav-link" href="#">ANU Org. Structure</a>
               </li>
-              <li class="nav-item active">
+              <li class="nav-item">
                 <a class="nav-link" href="#">Timeline</a>
               </li>
-              <li class="nav-item">
+              <li class="nav-item active">
                 <a class="nav-link" href="#">Planning Cycle</a>
               </li>
             </ul>
@@ -48,24 +48,58 @@
     </div>
   </nav>
 
-  <div class="container timeline-page">
+  <div class="container planning-page">
     <div class="row">
-      <div class="col-12">
+      <div class="col-6">
         <h6>select a strategic goal to view the timeline for key initiatives</h6>
       </div>
-      <div class="col-12 timeline-list">
+      <div class="col-6 filters">
+        <div class="row">
+          <div class="col-7">
+            <div class="form-group row">
+              <label for="filter-by-year" class="col-4 ps-5 col-form-label">Filter by:</label>
+              <div class="col-4 ps-5">
+                <select class="form-control" id="filter-by-year">
+                  <option>Year</option>
+                  <option>2019</option>
+                  <option>2018</option>
+                  <option>2017</option>
+                  <option>2016</option>
+                </select>
+              </div>
+              <div class="col-4 ps-5">
+                <select class="form-control" id="filter-by-month">
+                  <option>Month</option>
+                  <option>January</option>
+                  <option>February</option>
+                  <option>March</option>
+                  <option>April</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="col-5">
+            <div class="form-group row">
+              <label for="filter-by-year" class="col-4 ps-5 col-form-label">Position</label>
+              <div class="col-8 ps-5">
+                <select class="form-control" id="filter-by-year">
+                  <option>All</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 budgeting-cycle">
         <div class="accordion goals" id="strategic-goals-group">
           <div class="card">
             <div class="card-header" id="collapse-1-head">
               <h5 class="mb-0" data-toggle="collapse" data-target="#collapse-1" aria-expanded="false" aria-controls="collapse-1">
                 <div class="name-group">
-                  <div class="goal-number">SG-1</div>
-                  <div class="goal-name">Building on a culture of Accademic Excellence</div>
+                  <div class="goal-number"><i class="fas fa-square"></i></div>
+                  <div class="goal-name">2019 Review &amp; Budgeting Cycle</div>
                 </div>
                 <div class="status-group">
-                  <div class="goal-stage">
-                    <span class="good"></span>Within Tolerance
-                  </div>
                   <div class="collapse-state">
                     <i class="fas fa-caret-right"></i>
                   </div>
@@ -86,13 +120,10 @@
             <div class="card-header" id="collapse-2-head">
               <h5 class="mb-0" data-toggle="collapse" data-target="#collapse-2" aria-expanded="false" aria-controls="collapse-2">
                 <div class="name-group">
-                  <div class="goal-number">SG-2</div>
-                  <div class="goal-name">Delivering on our Unique National Responsabilieies</div>
+                  <div class="goal-number"><i class="fas fa-square"></i></div>
+                  <div class="goal-name">2018 Review &amp; Budgeting Cycle</div>
                 </div>
                 <div class="status-group">
-                  <div class="goal-stage">
-                    <span class="warning"></span>Approching Tolerance
-                  </div>
                   <div class="collapse-state">
                     <i class="fas fa-caret-right"></i>
                   </div>
@@ -115,13 +146,10 @@
               data-toggle="collapse" data-target="#collapse-3"
               aria-expanded="false" aria-controls="collapse-3">
                 <div class="name-group">
-                  <div class="goal-number">SG-3</div>
-                  <div class="goal-name">Achiving Equity - Within ANU and in society</div>
+                  <div class="goal-number"><i class="fas fa-square"></i></div>
+                  <div class="goal-name">2017 Review &amp; Budgeting Cycle</div>
                 </div>
                 <div class="status-group">
-                  <div class="goal-stage">
-                    <span class="good"></span>Within Tolerance
-                  </div>
                   <div class="collapse-state">
                     <i class="fas fa-caret-right"></i>
                   </div>
@@ -144,13 +172,10 @@
               data-toggle="collapse" data-target="#collapse-4"
               aria-expanded="false" aria-controls="collapse-4">
                 <div class="name-group">
-                  <div class="goal-number">SG-4</div>
-                  <div class="goal-name">Building a culture of collegiality and Engagement - Across and Beyond ANU</div>
+                  <div class="goal-number"><i class="fas fa-square"></i></div>
+                  <div class="goal-name">2016 Review &amp; Budgeting Cycle</div>
                 </div>
                 <div class="status-group">
-                  <div class="goal-stage">
-                    <span class="danger"></span>Exceeds Tolerance
-                  </div>
                   <div class="collapse-state">
                     <i class="fas fa-caret-right"></i>
                   </div>
@@ -173,13 +198,10 @@
               data-toggle="collapse" data-target="#collapse-5"
               aria-expanded="false" aria-controls="collapse-5">
                 <div class="name-group">
-                  <div class="goal-number">SG-5</div>
-                  <div class="goal-name">Achiving Equity - Within ANU and in society</div>
+                  <div class="goal-number"><i class="fas fa-square"></i></div>
+                  <div class="goal-name">2015 Review &amp; Budgeting Cycle</div>
                 </div>
                 <div class="status-group">
-                  <div class="goal-stage">
-                    <span class="good"></span>Within Tolerance
-                  </div>
                   <div class="collapse-state">
                     <i class="fas fa-caret-right"></i>
                   </div>
