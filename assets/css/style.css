@@ -474,21 +474,27 @@ body {
         background-color: #00c5d5; }
   .anu-org-structure .initiatives {
     overflow-x: hidden;
-    overflow-y: scroll; }
+    overflow-y: scroll;
+    min-height: 55vh; }
     .anu-org-structure .initiatives .list ul li .state {
       width: 95px; }
     .anu-org-structure .initiatives .list ul li .arrow {
       width: 75px; }
     .anu-org-structure .initiatives .list ul li .link {
       width: 85px; }
+    .anu-org-structure .initiatives .initiativesList {
+      width: 100%;
+      display: block; }
     .anu-org-structure .initiatives .card-head {
       padding-left: 20px;
       padding-right: 20px;
       padding-top: 10px;
-      padding-bottom: 10px;
+      padding-bottom: 20px;
+      display: block;
       border-radius: 5px 5px 5px 5px;
       background-color: white;
-      font-size: 90%; }
+      font-size: 90%;
+      min-height: 42px; }
       .anu-org-structure .initiatives .card-head .name {
         width: 70%;
         font-size: 100%;
@@ -511,7 +517,6 @@ body {
           width: 50%;
           font-weight: bold; }
     .anu-org-structure .initiatives .details {
-      padding-top: 20px;
       padding-left: 15px;
       padding-right: 15px;
       border-radius: .25rem;
@@ -523,11 +528,13 @@ body {
       animation-delay: 0s;
       animation-timing-function: ease-in-out;
       animation-iteration-count: 1;
-      animation-play-state: running; }
-      .anu-org-structure .initiatives .details.open {
+      animation-play-state: paused; }
+      .anu-org-structure .initiatives .details.open-it {
         animation-name: details-open; }
-      .anu-org-structure .initiatives .details.close {
+      .anu-org-structure .initiatives .details.close-it {
         animation-name: details-close; }
+      .anu-org-structure .initiatives .details.playing {
+        animation-play-state: running; }
 @keyframes details-open {
   from {
     left: calc(100%);

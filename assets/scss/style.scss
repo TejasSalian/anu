@@ -415,6 +415,7 @@ body{
   .initiatives{
     overflow-x: hidden;
     overflow-y: scroll;
+    min-height: 55vh;
     .list{
       @extend .globalinitiatives;
       ul{
@@ -431,14 +432,20 @@ body{
         }
       }
     }
+    .initiativesList{
+      width: 100%;
+      display: block;
+    }
     .card-head{
       padding-left: 20px;
       padding-right: 20px;
       padding-top: 10px;
-      padding-bottom: 10px;
+      padding-bottom: 20px;
+      display: block;
       border-radius: 5px 5px 5px 5px;
       background-color: white;
       font-size: 90%;
+      min-height: 42px;
       .name{
         width: 70%;
         font-size: 100%;
@@ -466,7 +473,6 @@ body{
       }
     }
     .details{
-      padding-top: 20px;
       padding-left: 15px;
       padding-right: 15px;
       border-radius: .25rem;
@@ -478,12 +484,15 @@ body{
       animation-delay: 0s;
       animation-timing-function: ease-in-out;
       animation-iteration-count: 1;
-      animation-play-state: running;
-      &.open{
+      animation-play-state: paused;
+      &.open-it{
         animation-name: details-open;
       }
-      &.close{
+      &.close-it{
         animation-name: details-close;
+      }
+      &.playing{
+        animation-play-state: running;
       }
       @keyframes details-open{
         from{

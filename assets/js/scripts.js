@@ -4,7 +4,11 @@
   var strategicPlans,
       strategicGoalsListItem,
       strategicPlansDetailedViewBack,
-      strategicPlansDetailedView;
+      strategicPlansDetailedView,
+      initiativesList,
+      initiativesMoreDetails,
+      initiativesViewMore,
+      closeAnuOrgDetailView;
 
 // Initialisation
 
@@ -13,6 +17,10 @@
   strategicGoalsListItem = $('#strategic-goals-group li');
   strategicPlansDetailedViewBack = $('#strategic-plans-detailed-view img');
   strategicPlansDetailedView = $('#strategic-plans-detailed-view');
+  initiativesViewMore = $('.initiatives .link > a');
+  initiativesMoreDetails  = $('.initiatives .details');
+  initiativesList  = $('.initiativesList');
+  closeAnuOrgDetailView  = $('#close-anu-org-detail-view');
 
 // Funstions
 
@@ -31,6 +39,30 @@
     strategicPlans.removeClass('d-none');
     // hide Detail Panel
     strategicPlansDetailedView.addClass('d-none');
+  });
+
+  // initiatives List item View More click Event
+  initiativesViewMore.on('click', function() {
+    // initiatives list hide
+    initiativesList.addClass('d-none');
+    // initiatives view more animate
+    initiativesMoreDetails.removeClass('d-none close-it').addClass('open-it playing');
+    setTimeout(function () {
+      initiativesMoreDetails.removeClass('playing');
+      initiativesMoreDetails.removeClass('open-it').addClass('close-it');
+    }, 300);
+  });
+
+  // initiatives Detail view close click Event
+  closeAnuOrgDetailView.on('click', function() {
+    // initiatives list show
+    initiativesList.removeClass('d-none');
+    // initiatives view more animate
+    initiativesMoreDetails.addClass('playing');
+    setTimeout(function () {
+      initiativesMoreDetails.removeClass('playing');
+      // initiativesMoreDetails.addClass('d-none');
+    }, 300);
   });
 
 
