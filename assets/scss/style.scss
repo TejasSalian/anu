@@ -2,6 +2,7 @@
 @import 'switches';
 @import 'strategystate';
 @import 'globalinitiatives';
+@import 'goals';
 $img : '../images/';
 
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600');
@@ -134,79 +135,7 @@ body{
     border-bottom: 1px dashed  rgba(0,0,0,0.12);
   }
   .goals{
-    .card{
-      margin: 8px 0px;
-      border-radius: 0;
-      &:last-child{
-        .card-header{
-            border-bottom: 0px;
-        }
-      }
-    }
-    .card-header {
-      background-color: rgba(0, 0, 0, 0);
-      h5{
-        font-size: 100%;
-        cursor: pointer;
-        .name-group{
-          display: inline-block;
-          width: 75%;
-          float: left;
-          div{
-            display: inline-block;
-          }
-          .goal-number{
-            font-weight: bold;
-            padding: 5px 10px;
-            float: left;
-          }
-          .goal-name{
-            font-weight: normal;
-            float: left;
-            padding: 5px 10px;
-          }
-
-        }
-        .status-group{
-          display: inline-block;
-          width: 25%;
-          float: left;
-          .goal-stage{
-            font-weight: normal;
-            float: left;
-            span{
-              @extend .strategystate;
-            }
-          }
-          .collapse-state{
-            float: right;
-            display: inline-block;
-            position: absolute;
-            top: 18px;
-            right: 30px;
-            transition: all;
-            transition-duration: 0.3s;
-            transition-timing-function: ease-in-out;
-          }
-        }
-        &::after{
-          position: relative;
-        }
-      }
-      h5[aria-expanded="false"]{
-        .collapse-state{
-          transform: rotateZ(00deg);
-        }
-      }
-      h5[aria-expanded="true"]{
-        .collapse-state{
-          transform: rotateZ(90deg);
-        }
-      }
-    }
-    .card-body{
-      @extend .globalinitiatives;
-    }
+    @extend .goals-model;
   }
 }
 #strategic-plans-detailed-view{
@@ -573,6 +502,19 @@ body{
       span{
         @extend .strategystate;
       }
+    }
+  }
+}
+.timeline-page{
+  margin-top: 26vh;
+  h6{
+    text-align: center;
+    font-size: 100%;
+    color: #888;
+  }
+  .timeline-list{
+    .goals{
+      @extend .goals-model;
     }
   }
 }
