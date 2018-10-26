@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./assets/css/font-awesome-all.css">
+  <link rel="stylesheet" href="./assets/css/animate.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+
+  <title>Dashboard - Australian National University</title>
+</head>
+
+<body>
+
+  <nav class="fixed-top navbar">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12">
+          <div class="oneBySeven">
+            <a class="navbar-brand logo" href="#">
+              <img src="./assets/images/anu-white.svg" alt="ANU Home">
+            </a>
+          </div>
+          <div class="fiveBySeven pl-5">
+            <ul class="d-flex">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  By Activity
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="#">ANU</a>
+                  <a class="dropdown-item" href="#">College</a>
+                  <a class="dropdown-item" href="#">School</a>
+                  <a class="dropdown-item" href="#">Division</a>
+                  <a class="dropdown-item" href="#">Exec Portfolio</a>
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Division
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="#">Action</a>
+                  <a class="dropdown-item" href="#">Another action</a>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  CoS
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="#">Cos</a>
+                  <a class="dropdown-item" href="#">CASS</a>
+                  <a class="dropdown-item" href="#">GE</a>
+                  <a class="dropdown-item" href="#">--</a>
+                </div>
+              </li>
+            </ul>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container-fluid anu-dash">
+    <div class="row p-3 pl-5 pr-5">
+      <div class="col-4 p-3">
+        <div class="card p-3">
+          <div id="key-initiatives"><svg></svg></div>
+          <script src="./assets/js/graphs/key-initiatives.js"></script>
+        </div>
+      </div>
+      <div class="col-4 p-3">
+        <div class="card p-3">
+          <div class="options-control">
+            <h5>Topics:</h5>
+            <div class="input-group">
+              <select class="form-control">
+                <option selected>Choose...</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+              </select>
+            </div>
+          </div>
+          <div id="recommendations"><svg></svg></div>
+          <script src="./assets/js/graphs/recommendations.js"></script>
+        </div>
+      </div>
+      <div class="col-4 p-3">
+        <div class="card p-3">
+          <div id="rap-initiatives"><svg></svg></div>
+          <script src="./assets/js/graphs/rap-initiatives.js"></script>
+        </div>
+      </div>
+      <div class="col-4 p-3">
+        <div class="card p-3">
+          <div id="risks"><svg></svg></div>
+          <script src="./assets/js/graphs/risks.js"></script>
+        </div>
+      </div>
+      <div class="col-4 p-3">
+        <div class="card p-3">
+          <div class="options-control">
+            <h5>Topics:</h5>
+            <div class="input-group">
+              <select class="form-control">
+                <option selected>Choose...</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+              </select>
+            </div>
+          </div>
+          <div id="projets"><svg></svg></div>
+          <script src="./assets/js/graphs/projets.js"></script>
+        </div>
+      </div>
+      <div class="col-4 p-3">
+        <div class="card p-3">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./assets/js/jquery-3.3.1.min.js"></script>
+  <script src="./assets/js/popper.min.js"></script>
+  <script src="./assets/js/bootstrap.min.js"></script>
+  <script src="./assets/js/scripts.js"></script>
+</body>
+
+</html>

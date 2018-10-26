@@ -1,0 +1,125 @@
+.progress-graph {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  li {
+    .list-head {
+      width: 30%;
+      min-width: 30%;
+      max-width: 30%;
+
+      h6 {
+        text-align: left;
+        color: black;
+      }
+    }
+
+    .graph {
+      width: 70%;
+
+      ul.axis {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        width: 100%;
+        margin-top: 10px;
+
+        &::before {
+          content: ' ';
+          background-image: url($img + 'round.svg');
+          content: ' ';
+          content: ' ';
+          height: 25px;
+          display: block;
+          width: 25px;
+          right: 0;
+          position: absolute;
+          margin-top: 14px;
+          margin-right: 8px;
+        }
+
+        li {
+          flex: 1 1 auto;
+          background-color: transparent;
+          height: 26px;
+          padding: 0;
+          border-bottom: 1px solid #abacad;
+
+          &::before {
+            content: ' ';
+            background-image: url($img + 'round.svg');
+            content: ' ';
+            height: 25px;
+            display: block;
+            width: 25px;
+            position: absolute;
+            margin-left: -13px;
+            margin-top: 15px;
+          }
+
+          &::after {
+            content: attr(data-quater-name);
+            position: absolute;
+            font-weight: bold;
+            height: 32px;
+            width: 50px;
+            margin-top: 32px;
+            margin-left: calc(7% - 34px);
+          }
+
+          div.diamond {
+            display: block;
+            width: 100%;
+            height: 36px;
+            transition: margin-left;
+            transition-timing-function: ease-in-out;
+            transition-duration: 0.5s;
+            margin-left: calc(0% - 12px);
+
+            &::before {
+              background-image: url($img +'diamond.svg');
+              background-size: 22px 22px;
+              content: ' ';
+              background-repeat: no-repeat;
+              background-position-y: 3px;
+              background-position-x: 0;
+              height: 32px;
+              width: 22px;
+              position: absolute;
+              cursor: pointer;
+            }
+          }
+
+          span {
+            text-align: center;
+            width: 100%;
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}
+.progress-graph-help-sign {
+  text-align: right;
+  width: 100%;
+  padding-top: 20px;
+
+  p {
+    font-size: 75%;
+
+    strong {
+      background-color: rgb(226, 226, 228);
+      padding: 10px 10px 10px 48px;
+      border-radius: 3px;
+      margin-left: 5px;
+      margin-right: 5px;
+      background-image: url($img + 'diamond.svg');
+      background-size: 18px 18px;
+      background-repeat: no-repeat;
+      background-position: 16px 8px;
+    }
+  }
+}

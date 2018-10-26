@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 23 23">
+  <defs>
+    <style>
+      .a {
+        opacity: 0.2;
+        mix-blend-mode: multiply;
+      }
+
+      .b {
+        fill: #fff;
+      }
+
+      .c {
+        fill: none;
+        stroke: #a5a5a5;
+        stroke-linecap: round;
+        stroke-miterlimit: 10;
+        stroke-width: 0.6px;
+      }
+    </style>
+    <symbol id="a" data-name="New Symbol 40" viewBox="0 0 23 23">
+      <g>
+          <circle class="b" cx="11.3" cy="9.5" r="5"/>
+          <circle class="c" cx="11.3" cy="9.5" r="5"/>
+        </g>
+    </symbol>
+  </defs>
+  <use width="23" height="23" xlink:href="#a"/>
+</svg>

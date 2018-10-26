@@ -169,6 +169,103 @@ label.switch {
     position: relative;
     top: -5px; }
 
+.progress-graph, .timeline-page .timeline-list .card-body .sg-list, .planning-page #strategic-goals-group .pc-list {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+  .progress-graph li .list-head, .timeline-page .timeline-list .card-body .sg-list li .list-head, .planning-page #strategic-goals-group .pc-list li .list-head {
+    width: 30%;
+    min-width: 30%;
+    max-width: 30%; }
+    .progress-graph li .list-head h6, .timeline-page .timeline-list .card-body .sg-list li .list-head h6, .planning-page #strategic-goals-group .pc-list li .list-head h6 {
+      text-align: left;
+      color: black; }
+  .progress-graph li .graph, .timeline-page .timeline-list .card-body .sg-list li .graph, .planning-page #strategic-goals-group .pc-list li .graph {
+    width: 70%; }
+    .progress-graph li .graph ul.axis, .timeline-page .timeline-list .card-body .sg-list li .graph ul.axis, .planning-page #strategic-goals-group .pc-list li .graph ul.axis {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      width: 100%;
+      margin-top: 10px; }
+      .progress-graph li .graph ul.axis::before, .timeline-page .timeline-list .card-body .sg-list li .graph ul.axis::before, .planning-page #strategic-goals-group .pc-list li .graph ul.axis::before {
+        content: ' ';
+        background-image: url("../images/round.svg");
+        content: ' ';
+        content: ' ';
+        height: 25px;
+        display: block;
+        width: 25px;
+        right: 0;
+        position: absolute;
+        margin-top: 14px;
+        margin-right: 8px; }
+      .progress-graph li .graph ul.axis li, .timeline-page .timeline-list .card-body .sg-list li .graph ul.axis li, .planning-page #strategic-goals-group .pc-list li .graph ul.axis li {
+        flex: 1 1 auto;
+        background-color: transparent;
+        height: 26px;
+        padding: 0;
+        border-bottom: 1px solid #abacad; }
+        .progress-graph li .graph ul.axis li::before, .timeline-page .timeline-list .card-body .sg-list li .graph ul.axis li::before, .planning-page #strategic-goals-group .pc-list li .graph ul.axis li::before {
+          content: ' ';
+          background-image: url("../images/round.svg");
+          content: ' ';
+          height: 25px;
+          display: block;
+          width: 25px;
+          position: absolute;
+          margin-left: -13px;
+          margin-top: 15px; }
+        .progress-graph li .graph ul.axis li::after, .timeline-page .timeline-list .card-body .sg-list li .graph ul.axis li::after, .planning-page #strategic-goals-group .pc-list li .graph ul.axis li::after {
+          content: attr(data-quater-name);
+          position: absolute;
+          font-weight: bold;
+          height: 32px;
+          width: 50px;
+          margin-top: 32px;
+          margin-left: calc(7% - 34px); }
+        .progress-graph li .graph ul.axis li div.diamond, .timeline-page .timeline-list .card-body .sg-list li .graph ul.axis li div.diamond, .planning-page #strategic-goals-group .pc-list li .graph ul.axis li div.diamond {
+          display: block;
+          width: 100%;
+          height: 36px;
+          transition: margin-left;
+          transition-timing-function: ease-in-out;
+          transition-duration: 0.5s;
+          margin-left: calc(0% - 12px); }
+          .progress-graph li .graph ul.axis li div.diamond::before, .timeline-page .timeline-list .card-body .sg-list li .graph ul.axis li div.diamond::before, .planning-page #strategic-goals-group .pc-list li .graph ul.axis li div.diamond::before {
+            background-image: url("../images/diamond.svg");
+            background-size: 22px 22px;
+            content: ' ';
+            background-repeat: no-repeat;
+            background-position-y: 3px;
+            background-position-x: 0;
+            height: 32px;
+            width: 22px;
+            position: absolute;
+            cursor: pointer; }
+        .progress-graph li .graph ul.axis li span, .timeline-page .timeline-list .card-body .sg-list li .graph ul.axis li span, .planning-page #strategic-goals-group .pc-list li .graph ul.axis li span {
+          text-align: center;
+          width: 100%;
+          display: block; }
+
+.progress-graph-help-sign, .timeline-page .timeline-list .card-body .help-sign, .planning-page #strategic-goals-group .help-sign {
+  text-align: right;
+  width: 100%;
+  padding-top: 20px; }
+  .progress-graph-help-sign p, .timeline-page .timeline-list .card-body .help-sign p, .planning-page #strategic-goals-group .help-sign p {
+    font-size: 75%; }
+    .progress-graph-help-sign p strong, .timeline-page .timeline-list .card-body .help-sign p strong, .planning-page #strategic-goals-group .help-sign p strong {
+      background-color: #e2e2e4;
+      padding: 10px 10px 10px 48px;
+      border-radius: 3px;
+      margin-left: 5px;
+      margin-right: 5px;
+      background-image: url("../images/diamond.svg");
+      background-size: 18px 18px;
+      background-repeat: no-repeat;
+      background-position: 16px 8px; }
+
 .goals-model .card, .strategic-goals .goals .card, .timeline-page .timeline-list .goals .card, .planning-page .budgeting-cycle .goals .card {
   margin: 8px 0px;
   border-radius: 0; }
@@ -222,14 +319,18 @@ body {
   font-weight: 400; }
 
 .home {
-  background-image: url("../images/background-home.png"); }
+  background-image: url("../images/background-home.png");
+  background-repeat: no-repeat; }
+  @media screen and (min-width: 1920px) {
+    .home {
+      background-size: 100% 100%; } }
   .home .row {
     padding-left: 10%;
     padding-right: 10%; }
   .home .threebyseven {
-    min-height: calc( (100vh / 7) * 3 ); }
+    min-height: calc((100vh / 7) * 3); }
   .home .twobyseven {
-    min-height: calc( (100vh / 7) * 2 ); }
+    min-height: calc((100vh / 7) * 2); }
   .home .logo-block {
     display: block; }
   .home h1 {
@@ -250,20 +351,25 @@ body {
     max-height: 80px;
     width: 100%;
     text-align: left;
-    padding-left: 10%;
-    padding-right: 10%;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding: 10px 10%;
     color: white; }
     .home .btn img {
       display: inline-block;
       max-width: 40px; }
+      @media screen and (min-width: 1440px) {
+        .home .btn img {
+          max-width: 24px; } }
     .home .btn h6 {
       display: inline-block;
       margin-left: 5%;
       font-size: 140%;
       margin-top: 15px;
-      margin-bottom: 0px; }
+      margin-bottom: 0; }
+      @media screen and (min-width: 1440px) {
+        .home .btn h6 {
+          font-size: 100%;
+          margin-top: 10px;
+          margin-bottom: 5px; } }
 
 .navbar {
   background: -moz-linear-gradient(0% 50% 0deg, #1de1d1 0%, #52b3d9 50%, #9776e5 100%);
@@ -274,13 +380,19 @@ body {
   -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#1DE1D1', endColorstr='#9776E5' ,GradientType=0)";
   background: linear-gradient(90deg, #1de1d1 0%, #52b3d9 50%, #9776e5 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1DE1D1',endColorstr='#9776E5' , GradientType=1);
-  box-shadow: 0 -20px 44px 23px rgba(0, 0, 0, 0.56); }
+  box-shadow: 0 -20px 44px 23px rgba(0, 0, 0, 0.56);
+  min-height: 130px; }
   .navbar .row {
     width: 100%;
     padding-left: 5%;
     padding-right: 5%; }
     .navbar .row .navbar-brand img {
       margin: 26px 50px 0 0; }
+    .navbar .row .navbar-brand.logo {
+      padding: 0;
+      margin: 0;
+      width: 214px;
+      margin-bottom: 20px; }
     .navbar .row .oneBySeven {
       width: calc((100% / 7) * 1);
       float: left; }
@@ -297,6 +409,42 @@ body {
         @media screen and (max-width: 1811px) {
           .navbar .row ul li {
             padding: 4px 20px; } }
+        .navbar .row ul li.dropdown {
+          border: 1px solid white;
+          border-radius: 2px;
+          height: 40px;
+          min-width: 213px;
+          margin-right: 20px; }
+          .navbar .row ul li.dropdown .nav-link {
+            padding: 0.2rem 1rem; }
+          .navbar .row ul li.dropdown .dropdown-toggle::after {
+            right: 18px;
+            position: absolute;
+            top: 16px; }
+          .navbar .row ul li.dropdown .dropdown-menu {
+            margin-left: -2px;
+            margin-top: 0;
+            border-radius: 0;
+            border: 0;
+            padding: 0;
+            border-left: 1px solid white;
+            border-top: 1px solid white;
+            border-right: 1px solid white; }
+            .navbar .row ul li.dropdown .dropdown-menu a {
+              background-color: #3ac7d5;
+              min-width: 212px; }
+              .navbar .row ul li.dropdown .dropdown-menu a:hover {
+                background: -moz-linear-gradient(0% 50% 0deg, #9776e5 0%, #52b3d9 50%, #1de1d1 100%);
+                background: -webkit-linear-gradient(0deg, #9776e5 0%, #52b3d9 50%, #1de1d1 100%);
+                background: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0, #9776e5), color-stop(0.5, #52b3d9), color-stop(1, #1de1d1));
+                background: -o-linear-gradient(0deg, #9776e5 0%, #52b3d9 50%, #1de1d1 100%);
+                background: -ms-linear-gradient(0deg, #9776e5 0%, #52b3d9 50%, #1de1d1 100%);
+                -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#9776E5', endColorstr='#1DE1D1' ,GradientType=0)";
+                background: linear-gradient(90deg, #9776e5 0%, #52b3d9 50%, #1de1d1 100%);
+                filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#9776E5',endColorstr='#1DE1D1' , GradientType=1); }
+          .navbar .row ul li.dropdown .dropdown-item {
+            padding: 0.35rem 1.5rem;
+            border-bottom: 1px solid white; }
         .navbar .row ul li.active {
           background: white;
           border-radius: 2px; }
@@ -309,7 +457,7 @@ body {
       .navbar .row .hierarchy img {
         float: right;
         width: 75px;
-        margin: 14px 0px;
+        margin: 14px 0;
         cursor: pointer; }
 
 .strategic-plans-summary {
@@ -317,7 +465,7 @@ body {
   .strategic-plans-summary h1 {
     font-size: 150%;
     text-align: center;
-    margin-bottom: 0px;
+    margin-bottom: 0;
     margin-top: 6px; }
     .strategic-plans-summary h1 span {
       background-color: #9676e5;
@@ -331,7 +479,7 @@ body {
   border-bottom: 1px dashed rgba(0, 0, 0, 0.12); }
 
 #strategic-plans-detailed-view {
-  margin-top: 26vh; }
+  margin-top: 22vh; }
   #strategic-plans-detailed-view .back {
     max-width: 80px;
     cursor: pointer; }
@@ -365,6 +513,56 @@ body {
     #strategic-plans-detailed-view .key-initiatives .initiatives h5, #strategic-plans-detailed-view .key-initiatives .initiatives h4 {
       font-size: 100%;
       font-weight: bold; }
+    #strategic-plans-detailed-view .key-initiatives .initiatives .timeline-graph {
+      display: block;
+      padding: 0;
+      margin: 0;
+      height: 30px;
+      width: 100%;
+      list-style: none;
+      margin-top: 36px;
+      margin-bottom: 30px; }
+      #strategic-plans-detailed-view .key-initiatives .initiatives .timeline-graph li[data-year] {
+        width: 50%;
+        height: 30px;
+        float: left; }
+        #strategic-plans-detailed-view .key-initiatives .initiatives .timeline-graph li[data-year]:after {
+          content: attr(data-year);
+          position: absolute;
+          font-size: 75%;
+          margin-left: 17.5%;
+          margin-top: 3px; }
+        #strategic-plans-detailed-view .key-initiatives .initiatives .timeline-graph li[data-year] > ul {
+          display: block;
+          padding: 0;
+          margin: 0;
+          height: 30px;
+          width: 100%;
+          list-style: none; }
+          #strategic-plans-detailed-view .key-initiatives .initiatives .timeline-graph li[data-year] > ul li {
+            width: 25%;
+            height: 30px;
+            float: left;
+            border: 1px solid #9933ff;
+            background-color: white;
+            background-size: 102% 213%;
+            background-position: 0 -17px;
+            background-repeat: repeat; }
+            #strategic-plans-detailed-view .key-initiatives .initiatives .timeline-graph li[data-year] > ul li:before {
+              position: absolute;
+              font-size: 75%;
+              margin-top: -22px;
+              margin-left: 16px; }
+            #strategic-plans-detailed-view .key-initiatives .initiatives .timeline-graph li[data-year] > ul li:nth-child(1):before {
+              content: 'Q1'; }
+            #strategic-plans-detailed-view .key-initiatives .initiatives .timeline-graph li[data-year] > ul li:nth-child(2):before {
+              content: 'Q2'; }
+            #strategic-plans-detailed-view .key-initiatives .initiatives .timeline-graph li[data-year] > ul li:nth-child(3):before {
+              content: 'Q3'; }
+            #strategic-plans-detailed-view .key-initiatives .initiatives .timeline-graph li[data-year] > ul li:nth-child(4):before {
+              content: 'Q4'; }
+            #strategic-plans-detailed-view .key-initiatives .initiatives .timeline-graph li[data-year] > ul li.active {
+              background-image: url("../images/block.svg"); }
     #strategic-plans-detailed-view .key-initiatives .initiatives p {
       font-weight: bold;
       font-size: 90%;
@@ -435,7 +633,7 @@ body {
       list-style: none;
       width: 100%;
       margin: 0;
-      padding: 0px 20px 20px 20px; }
+      padding: 0 20px 20px; }
       .anu-org-structure .sidebar .submenu li {
         width: 100%; }
         .anu-org-structure .sidebar .submenu li h5, .anu-org-structure .sidebar .submenu li #strategic-plans-detailed-view .key-initiatives .initiatives h4, #strategic-plans-detailed-view .key-initiatives .initiatives .anu-org-structure .sidebar .submenu li h4 {
@@ -487,10 +685,7 @@ body {
       width: 100%;
       display: block; }
     .anu-org-structure .initiatives .card-head {
-      padding-left: 20px;
-      padding-right: 20px;
-      padding-top: 10px;
-      padding-bottom: 20px;
+      padding: 10px 20px 20px;
       display: block;
       border-radius: 5px 5px 5px 5px;
       background-color: white;
@@ -520,10 +715,10 @@ body {
     .anu-org-structure .initiatives .details {
       padding-left: 15px;
       padding-right: 15px;
-      border-radius: .25rem;
+      border-radius: 0.25rem;
       position: relative;
       left: calc(100%);
-      height: 0px;
+      height: 0;
       animation-duration: 0.3s;
       animation-fill-mode: forwards;
       animation-delay: 0s;
@@ -538,18 +733,18 @@ body {
         animation-play-state: running; }
 @keyframes details-open {
   from {
-    left: calc(100%);
-    height: 0px; }
+    left: 100%;
+    height: 0; }
   to {
-    left: 0px;
+    left: 0;
     height: auto; } }
 @keyframes details-close {
   from {
-    left: 0px;
+    left: 0;
     height: auto; }
   to {
-    left: calc(100%);
-    height: 0px; } }
+    left: 100%;
+    height: 0; } }
       .anu-org-structure .initiatives .details h5, .anu-org-structure #strategic-plans-detailed-view .key-initiatives .initiatives .details h4, #strategic-plans-detailed-view .key-initiatives .anu-org-structure .initiatives .details h4 {
         font-size: 90%; }
         .anu-org-structure .initiatives .details h5 span, .anu-org-structure #strategic-plans-detailed-view .key-initiatives .initiatives .details h4 span, #strategic-plans-detailed-view .key-initiatives .anu-org-structure .initiatives .details h4 span {
@@ -579,7 +774,9 @@ body {
         .anu-org-structure .initiatives .details .suggestion .status {
           width: 67%; }
       .anu-org-structure .initiatives .details #close-anu-org-detail-view {
-        cursor: pointer; }
+        cursor: pointer;
+        float: right;
+        max-width: 50px; }
       .anu-org-structure .initiatives .details p {
         font-size: 90%; }
       .anu-org-structure .initiatives .details li {
@@ -603,7 +800,8 @@ body {
     font-size: 100%;
     color: #888;
     margin-top: 6px; }
-  .planning-page .filters select, .planning-page .filters label {
+  .planning-page .filters label,
+  .planning-page .filters select {
     font-size: 85%;
     text-align: right; }
   .planning-page .filters .ps-5 {
@@ -618,5 +816,56 @@ body {
     font-size: 50%;
     margin-top: 5px;
     display: block; }
+  .planning-page #strategic-goals-group .pc-list > li {
+    padding-bottom: 20px;
+    padding-top: 15px; }
+    .planning-page #strategic-goals-group .pc-list > li > .list-head {
+      padding-top: 20px; }
+    .planning-page #strategic-goals-group .pc-list > li > .graph {
+      margin-top: -20px; }
+      .planning-page #strategic-goals-group .pc-list > li > .graph > ul.axis > li::after {
+        margin-left: -6px; }
+      .planning-page #strategic-goals-group .pc-list > li > .graph > ul.axis::after {
+        content: attr(data-quater-name);
+        position: absolute;
+        font-weight: bold;
+        height: 32px;
+        width: 50px;
+        margin-top: 32px;
+        right: 0;
+        font-size: 80%; }
+
+.anu-dash {
+  padding-top: 150px; }
+  .anu-dash .card {
+    max-height: 250px;
+    overflow: hidden;
+    background-color: #ebeded; }
+    .anu-dash .card .options-control {
+      text-align: left;
+      right: 12px;
+      width: 30%;
+      display: block;
+      position: absolute;
+      z-index: 1;
+      margin-top: -10px; }
+      .anu-dash .card .options-control h5, .anu-dash .card .options-control #strategic-plans-detailed-view .key-initiatives .initiatives h4, #strategic-plans-detailed-view .key-initiatives .initiatives .anu-dash .card .options-control h4 {
+        font-size: 88%;
+        color: #333; }
+      .anu-dash .card .options-control .form-control {
+        background-color: #ebeded;
+        font-size: 80%;
+        height: 32px; }
+    .anu-dash .card svg {
+      transform: scale(0.8);
+      padding: 0;
+      margin-left: -60px;
+      margin-top: -34px; }
+      @media screen and (min-width: 1440px) {
+        .anu-dash .card svg {
+          margin-left: -75px;
+          transform: scale(0.7); } }
+    .anu-dash .card #risks {
+      margin-top: 20px; }
 
 /*# sourceMappingURL=style.css.map */

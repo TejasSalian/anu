@@ -1,126 +1,209 @@
+$img: '../images/';
 @import 'mixins';
 @import 'switches';
 @import 'strategystate';
 @import 'globalinitiatives';
+@import 'planning-graph';
 @import 'goals';
-$img : '../images/';
-
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600');
 
-body{
+body {
   font-family: 'Montserrat', sans-serif;
   font-size: 100%;
   font-weight: 400;
 }
 
-.home{
+.home {
   background-image: url($img + 'background-home.png');
-  .row{
+  background-repeat: no-repeat;
+  @media screen and (min-width:1920px) {
+    background-size: 100% 100%;
+  }
+
+  .row {
     padding-left: 10%;
     padding-right: 10%;
   }
-  .threebyseven{
-    min-height: calc( (100vh / 7) * 3 );
+
+  .threebyseven {
+    min-height: calc((100vh / 7) * 3);
   }
-  .twobyseven{
-    min-height: calc( (100vh / 7) * 2 );
+
+  .twobyseven {
+    min-height: calc((100vh / 7) * 2);
   }
-  .logo-block{
-      display: block;
+
+  .logo-block {
+    display: block;
   }
-  h1{
+
+  h1 {
     font-size: 245%;
     font-weight: 300;
-    strong{
+
+    strong {
       font-size: 125%;
       font-weight: 400;
     }
   }
-  .btn{
+
+  .btn {
     @include btn-gradient();
     max-height: 80px;
     width: 100%;
     text-align: left;
-    padding-left: 10%;
-    padding-right: 10%;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding: 10px 10%;
     color: white;
-    img{
+
+    img {
       display: inline-block;
       max-width: 40px;
+      @media screen and (min-width:1440px) {
+        max-width: 24px;
+      }
     }
-    h6{
+
+    h6 {
       display: inline-block;
       margin-left: 5%;
       font-size: 140%;
       margin-top: 15px;
-      margin-bottom: 0px;
+      margin-bottom: 0;
+      @media screen and (min-width:1440px) {
+        font-size: 100%;
+        margin-top: 10px;
+        margin-bottom: 5px;
+      }
     }
   }
 }
 
-.navbar{
+.navbar {
   @include menu-gradient();
   box-shadow: 0 -20px 44px 23px hsla(0, 0%, 0%, 0.56);
-  .row{
+  min-height: 130px;
+
+  .row {
     width: 100%;
     padding-left: 5%;
     padding-right: 5%;
-    .navbar-brand{
-      img{
+
+    .navbar-brand {
+      img {
         margin: 26px 50px 0 0;
       }
+
+      &.logo {
+        padding: 0;
+        margin: 0;
+        width: 214px;
+        margin-bottom: 20px;
+      }
     }
-    .oneBySeven{
+
+    .oneBySeven {
       width: calc((100% / 7) * 1);
       float: left;
     }
-    .fiveBySeven{
+
+    .fiveBySeven {
       width: calc((100% / 7) * 5);
       float: left;
     }
-    ul{
+
+    ul {
       list-style: none;
       padding: 0;
       margin: 0;
-      li{
+
+      li {
         padding: 4px 60px;
         margin: 32px 0;
-        @media screen and (max-width: 1811px){
+        @media screen and (max-width: 1811px) {
           padding: 4px 20px;
         }
-        &.active{
+
+        &.dropdown {
+          border: 1px solid white;
+          border-radius: 2px;
+          height: 40px;
+          min-width: 213px;
+          margin-right: 20px;
+
+          .nav-link {
+            padding: 0.2rem 1rem;
+          }
+
+          .dropdown-toggle::after {
+            right: 18px;
+            position: absolute;
+            top: 16px;
+          }
+
+          .dropdown-menu {
+            margin-left: -2px;
+            margin-top: 0;
+            border-radius: 0;
+            border: 0;
+            padding: 0;
+            border-left: 1px solid white;
+            border-top: 1px solid white;
+            border-right: 1px solid white;
+
+            a {
+              background-color: #3ac7d5;
+              min-width: 212px;
+
+              &:hover {
+                @include btn-gradient();
+              }
+            }
+          }
+
+          .dropdown-item {
+            padding: 0.35rem 1.5rem;
+            border-bottom: 1px solid white;
+          }
+        }
+
+        &.active {
           background: white;
           border-radius: 2px;
-          a{
+
+          a {
             color: black;
           }
         }
-        a{
+
+        a {
           color: white;
         }
       }
     }
-    .hierarchy{
+
+    .hierarchy {
       float: right;
-      img{
+
+      img {
         float: right;
         width: 75px;
-        margin: 14px 0px;
+        margin: 14px 0;
         cursor: pointer;
       }
     }
   }
 }
-.strategic-plans-summary{
+
+.strategic-plans-summary {
   margin-top: 26vh;
-  h1{
+
+  h1 {
     font-size: 150%;
     text-align: center;
-    margin-bottom: 0px;
+    margin-bottom: 0;
     margin-top: 6px;
-    span{
+
+    span {
       background-color: #9676e5;
       padding: 5px 10px;
       color: white;
@@ -128,29 +211,35 @@ body{
     }
   }
 }
-.strategic-goals{
-  h2{
+
+.strategic-goals {
+  h2 {
     font-size: 100%;
     padding-bottom: 10px;
-    border-bottom: 1px dashed  rgba(0,0,0,0.12);
+    border-bottom: 1px dashed rgba(0,0,0,0.12);
   }
-  .goals{
+
+  .goals {
     @extend .goals-model;
   }
 }
-#strategic-plans-detailed-view{
-  margin-top: 26vh;
-  .back{
+
+#strategic-plans-detailed-view {
+  margin-top: 22vh;
+
+  .back {
     max-width: 80px;
     cursor: pointer;
   }
-  h2{
+
+  h2 {
     color: #999;
     font-size: 110%;
     margin-top: 12px;
     text-align: center;
   }
-  h3{
+
+  h3 {
     border-bottom: 2px solid #fff;
     font-size: 100%;
     margin-top: 10px;
@@ -158,17 +247,21 @@ body{
     padding-bottom: 10px;
     text-align: center;
   }
-  .key-initiatives{
-    h3{
+
+  .key-initiatives {
+    h3 {
       border-color: #987ee5;
     }
-    .initiatives{
+
+    .initiatives {
       background-color: #e0e0e4;
       padding: 15px 30px;
-      h4{
+
+      h4 {
         @extend h5;
         margin-left: -10px;
-        &::before{
+
+        &::before {
           content: ' ';
           background-color: #987ee5;
           height: 12px;
@@ -178,42 +271,132 @@ body{
           left: -10px;
         }
       }
-      h5{
+
+      h5 {
         font-size: 100%;
         font-weight: bold;
       }
-      p{
+
+      .timeline-graph {
+        display: block;
+        padding: 0;
+        margin: 0;
+        height: 30px;
+        width: 100%;
+        list-style: none;
+        margin-top: 36px;
+        margin-bottom: 30px;
+
+        li[data-year] {
+          width: 50%;
+          height: 30px;
+          float: left;
+
+          &:after {
+            content: attr(data-year);
+            position: absolute;
+            font-size: 75%;
+            margin-left: 17.5%;
+            margin-top: 3px;
+          }
+
+          & > ul {
+            display: block;
+            padding: 0;
+            margin: 0;
+            height: 30px;
+            width: 100%;
+            list-style: none;
+
+            li {
+              width: 25%;
+              height: 30px;
+              float: left;
+              border: 1px solid #9933ff;
+              background-color: white;
+              background-size: 102% 213%;
+              background-position: 0 -17px;
+              background-repeat: repeat;
+
+              &:before {
+                position: absolute;
+                font-size: 75%;
+                margin-top: -22px;
+                margin-left: 16px;
+              }
+
+              &:nth-child(1) {
+                &:before {
+                  content: 'Q1';
+                }
+              }
+
+              &:nth-child(2) {
+                &:before {
+                  content: 'Q2';
+                }
+              }
+
+              &:nth-child(3) {
+                &:before {
+                  content: 'Q3';
+                }
+              }
+
+              &:nth-child(4) {
+                &:before {
+                  content: 'Q4';
+                }
+              }
+
+              &.active {
+                background-image: url($img + 'block.svg');
+              }
+            }
+          }
+        }
+      }
+
+      p {
         font-weight: bold;
         font-size: 90%;
         padding-top: 8px;
         padding-bottom: 8px;
         border-bottom: 1px dashed #b0acbd;
       }
-      .progress-list{
 
-      }
-      .risk-list{
+      .progress-list {}
+
+      .risk-list {
         list-style: none;
       }
-      .status-list{
+
+      .status-list {
         list-style: none;
-        li{
+
+        li {
           margin-bottom: 10px;
-          span{
+
+          span {
             @extend .strategystate;
           }
-          div{
+
+          div {
             display: inline-block;
-            &.up{
+
+            &.up {
               color: #54b758;
             }
-            &.down{
+
+            &.down {
               color: #9E9E9E;
             }
-            &.bi-directional{
+
+            &.bi-directional {
               color: #2196F3;
             }
-            .fas{
+
+            .fas {
               position: relative;
               top: 3px;
               left: 2px;
@@ -225,16 +408,19 @@ body{
       }
     }
   }
-  .linked-business{
-    h3{
+
+  .linked-business {
+    h3 {
       border-color: #26d8d2;
     }
-    span{
+
+    span {
       margin-left: 6px;
       opacity: 0.5;
     }
-    table{
-      i{
+
+    table {
+      i {
         font-size: 50%;
         position: relative;
         top: -2px;
@@ -243,20 +429,24 @@ body{
       }
     }
   }
-  .linked-initiatives{
-    h3{
+
+  .linked-initiatives {
+    h3 {
       border-color: #d7dddc;
     }
-    span{
+
+    span {
       margin-left: 6px;
       opacity: 0.5;
     }
-    p{
+
+    p {
       padding-left: 45px;
       font-size: 100%;
       margin-bottom: 10px;
       font-weight: bold;
-      &::before{
+
+      &::before {
         content: ' ';
         background-color: #999;
         width: 7px;
@@ -269,32 +459,40 @@ body{
     }
   }
 }
-.anu-org-structure{
+
+.anu-org-structure {
   margin-top: 26vh;
-  .sidebar{
+
+  .sidebar {
     border-right: 1px dashed #DDD;
-    h4{
+
+    h4 {
       text-align: center;
       font-size: 85%;
       color: #999;
       font-weight: normal;
     }
-    .submenu{
+
+    .submenu {
       list-style: none;
       width: 100%;
       margin: 0;
-      padding: 0px 20px 20px 20px;
-      li{
+      padding: 0 20px 20px;
+
+      li {
         width: 100%;
-        h5{
+
+        h5 {
           width: 100%;
           font-size: 90%;
           color: white;
-          margin-bottom: 3px; cursor: pointer;
+          margin-bottom: 3px;
+          cursor: pointer;
           padding: 5px 10px;
         }
-        h5[aria-expanded="false"]{
-          &::after{
+
+        h5[aria-expanded="false"] {
+          &::after {
             content: '+';
             position: absolute;
             right: 50px;
@@ -302,8 +500,9 @@ body{
             font-size: 100%;
           }
         }
-        h5[aria-expanded="true"]{
-          &::after{
+
+        h5[aria-expanded="true"] {
+          &::after {
             content: '-';
             position: absolute;
             right: 50px;
@@ -311,89 +510,102 @@ body{
             font-size: 100%;
           }
         }
-        .submenu-items{
+
+        .submenu-items {
           list-style: none;
           width: 100%;
           background-color: #DDD;
           padding: 5px;
           margin: 0;
-          li{
+
+          li {
             font-size: 80%;
             padding: 3px 2px;
             background-color: #CCC;
-            margin-bottom: 3px; cursor: pointer;
+            margin-bottom: 3px;
+            cursor: pointer;
           }
         }
       }
-      &.purple{
-        li{
-          h5{
+
+      &.purple {
+        li {
+          h5 {
             background-color: #8a81e3;
           }
         }
       }
-      &.cyan{
-        li{
-          h5{
+
+      &.cyan {
+        li {
+          h5 {
             background-color: #00c5d5;
           }
         }
       }
     }
   }
-  .initiatives{
+
+  .initiatives {
     overflow-x: hidden;
     overflow-y: scroll;
     min-height: 55vh;
-    .list{
+
+    .list {
       @extend .globalinitiatives;
-      ul{
-        li{
+
+      ul {
+        li {
           .state {
             width: 95px;
           }
+
           .arrow {
             width: 75px;
           }
+
           .link {
             width: 85px;
           }
         }
       }
     }
-    .initiativesList{
+
+    .initiativesList {
       width: 100%;
       display: block;
     }
-    .card-head{
-      padding-left: 20px;
-      padding-right: 20px;
-      padding-top: 10px;
-      padding-bottom: 20px;
+
+    .card-head {
+      padding: 10px 20px 20px;
       display: block;
       border-radius: 5px 5px 5px 5px;
       background-color: white;
       font-size: 90%;
       min-height: 42px;
-      .name{
+
+      .name {
         width: 70%;
         font-size: 100%;
         display: inline-block;
         float: left;
       }
-      .columns{
+
+      .columns {
         width: 30%;
         font-size: 100%;
         display: inline-block;
         float: left;
-        .status{
+
+        .status {
           display: inline-block;
           float: left;
           width: 50%;
           text-align: center;
           font-weight: bold;
         }
-        .trends{
+
+        .trends {
           display: inline-block;
           float: left;
           width: 50%;
@@ -401,58 +613,67 @@ body{
         }
       }
     }
-    .details{
+
+    .details {
       padding-left: 15px;
       padding-right: 15px;
-      border-radius: .25rem;
+      border-radius: 0.25rem;
       position: relative;
       left: calc(100%);
-      height: 0px;
+      height: 0;
       animation-duration: 0.3s;
       animation-fill-mode: forwards;
       animation-delay: 0s;
       animation-timing-function: ease-in-out;
       animation-iteration-count: 1;
       animation-play-state: paused;
-      &.open-it{
+
+      &.open-it {
         animation-name: details-open;
       }
-      &.close-it{
+
+      &.close-it {
         animation-name: details-close;
       }
-      &.playing{
+
+      &.playing {
         animation-play-state: running;
       }
-      @keyframes details-open{
-        from{
-          left: calc(100%);
-          height: 0px;
+      @keyframes details-open {
+        from {
+          left: 100%;
+          height: 0;
         }
-        to{
-          left: 0px;
+
+        to {
+          left: 0;
           height: auto;
         }
       }
-      @keyframes details-close{
-        from{
-          left: 0px;
+      @keyframes details-close {
+        from {
+          left: 0;
           height: auto;
         }
-        to{
-          left: calc(100%);
-          height: 0px;
+
+        to {
+          left: 100%;
+          height: 0;
         }
       }
-      h5{
+
+      h5 {
         font-size: 90%;
-        span{
+
+        span {
           @extend .strategystate;
           font-size: 100%;
           position: relative;
           top: -2px;
           left: 34px;
         }
-        b{
+
+        b {
           @extend .globalinitiatives-arrow;
           background-color: transparent;
           font-size: 100%;
@@ -460,7 +681,8 @@ body{
           top: 4px;
           left: 20px;
         }
-        small{
+
+        small {
           font-size: 90%;
           color: #999;
           font-weight: bold;
@@ -468,92 +690,210 @@ body{
           display: inline-block;
         }
       }
-      .aligned{
-        h5{
+
+      .aligned {
+        h5 {
           min-height: 50px;
           margin-bottom: 0;
           vertical-align: middle;
         }
       }
-      .suggestion{
+
+      .suggestion {
         margin-left: 0;
         margin-left: 0;
-        .status{
+
+        .status {
           width: 67%;
         }
       }
-      #close-anu-org-detail-view{
+
+      #close-anu-org-detail-view {
         cursor: pointer;
+        float: right;
+        max-width: 50px;
       }
-      p{
+
+      p {
         font-size: 90%;
       }
-      li{
+
+      li {
         font-size: 90%;
       }
     }
-
   }
-  .status-breakdown{
-    .state{
+
+  .status-breakdown {
+    .state {
       display: inline-block;
       float: left;
       margin-right: 20px;
-      span{
+
+      span {
         @extend .strategystate;
       }
     }
   }
 }
-.timeline-page{
+
+.timeline-page {
   margin-top: 26vh;
-  h6{
+
+  h6 {
     text-align: center;
     font-size: 100%;
     color: #888;
   }
-  .timeline-list{
-    .goals{
+
+  .timeline-list {
+    .goals {
       @extend .goals-model;
+    }
+
+    .card-body {
+      .help-sign {
+        @extend .progress-graph-help-sign;
+      }
+
+      .sg-list {
+        @extend .progress-graph;
+      }
     }
   }
 }
-.planning-page{
+
+.planning-page {
   margin-top: 26vh;
-  h6{
+
+  h6 {
     text-align: left;
     font-size: 100%;
     color: #888;
     margin-top: 6px;
   }
-  .filters{
-    select, label{
+
+  .filters {
+    label,
+    select {
       font-size: 85%;
       text-align: right;
     }
-    .ps-5{
+
+    .ps-5 {
       padding: 0 5px;
     }
-    label.ps-5{
+
+    label.ps-5 {
       padding-top: 10px;
     }
-    .col-8.ps-5{
+
+    .col-8.ps-5 {
       padding-right: 15px;
     }
-    .form-control{
+
+    .form-control {
       border-radius: 0;
     }
   }
-  .budgeting-cycle{
-    .goals{
+
+  .budgeting-cycle {
+    .goals {
       @extend .goals-model;
-      .goal-number{
-        .fas{
+
+      .goal-number {
+        .fas {
           font-size: 50%;
           margin-top: 5px;
           display: block;
         }
       }
+    }
+  }
+
+  #strategic-goals-group {
+    .help-sign {
+      @extend .progress-graph-help-sign;
+    }
+
+    .pc-list {
+      @extend .progress-graph;
+
+      & > li {
+        padding-bottom: 20px;
+        padding-top: 15px;
+
+        & > .list-head {
+          padding-top: 20px;
+        }
+
+        & > .graph {
+          margin-top: -20px;
+
+          & > ul.axis {
+            & > li::after {
+              margin-left: -6px;
+            }
+
+            &::after {
+              content: attr(data-quater-name);
+              position: absolute;
+              font-weight: bold;
+              height: 32px;
+              width: 50px;
+              margin-top: 32px;
+              right: 0;
+              font-size: 80%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.anu-dash {
+  padding-top: 150px;
+
+  .card {
+    max-height: 250px;
+    overflow: hidden;
+    background-color: #ebeded;
+
+    .options-control {
+      text-align: left;
+      right: 12px;
+      width: 30%;
+      display: block;
+      position: absolute;
+      z-index: 1;
+      margin-top: -10px;
+
+      h5 {
+        font-size: 88%;
+        color: #333;
+      }
+
+      .form-control {
+        background-color: #ebeded;
+        font-size: 80%;
+        height: 32px;
+      }
+    }
+
+    svg {
+      transform: scale(0.8);
+      padding: 0;
+      margin-left: -60px;
+      margin-top: -34px;
+      @media screen and (min-width:1440px) {
+        margin-left: -75px;
+        transform: scale(0.7);
+      }
+    }
+
+    #risks {
+      margin-top: 20px;
     }
   }
 }
