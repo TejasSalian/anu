@@ -206,7 +206,8 @@ label.switch {
         background-color: transparent;
         height: 26px;
         padding: 0;
-        border-bottom: 1px solid #abacad; }
+        border-bottom: 1px solid #abacad;
+        text-align: center; }
         .progress-graph li .graph ul.axis li::before, .timeline-page .timeline-list .card-body .sg-list li .graph ul.axis li::before, .planning-page #strategic-goals-group .pc-list li .graph ul.axis li::before {
           content: ' ';
           background-image: url("../images/round.svg");
@@ -217,14 +218,11 @@ label.switch {
           position: absolute;
           margin-left: -13px;
           margin-top: 15px; }
-        .progress-graph li .graph ul.axis li::after, .timeline-page .timeline-list .card-body .sg-list li .graph ul.axis li::after, .planning-page #strategic-goals-group .pc-list li .graph ul.axis li::after {
-          content: attr(data-quater-name);
-          position: absolute;
-          font-weight: bold;
-          height: 32px;
-          width: 50px;
-          margin-top: 32px;
-          margin-left: calc(7% - 34px); }
+        .progress-graph li .graph ul.axis li div.quater-name, .timeline-page .timeline-list .card-body .sg-list li .graph ul.axis li div.quater-name, .planning-page #strategic-goals-group .pc-list li .graph ul.axis li div.quater-name {
+          text-align: center;
+          width: 100%;
+          display: block;
+          font-weight: bold; }
         .progress-graph li .graph ul.axis li div.diamond, .timeline-page .timeline-list .card-body .sg-list li .graph ul.axis li div.diamond, .planning-page #strategic-goals-group .pc-list li .graph ul.axis li div.diamond {
           display: block;
           width: 100%;
@@ -232,7 +230,8 @@ label.switch {
           transition: margin-left;
           transition-timing-function: ease-in-out;
           transition-duration: 0.5s;
-          margin-left: calc(0% - 12px); }
+          margin-left: calc(0% - 12px);
+          text-align: left; }
           .progress-graph li .graph ul.axis li div.diamond::before, .timeline-page .timeline-list .card-body .sg-list li .graph ul.axis li div.diamond::before, .planning-page #strategic-goals-group .pc-list li .graph ul.axis li div.diamond::before {
             background-image: url("../images/diamond.svg");
             background-size: 22px 22px;
@@ -244,6 +243,8 @@ label.switch {
             width: 22px;
             position: absolute;
             cursor: pointer; }
+        .progress-graph li .graph ul.axis li div[data-progress="0"], .timeline-page .timeline-list .card-body .sg-list li .graph ul.axis li div[data-progress="0"], .planning-page #strategic-goals-group .pc-list li .graph ul.axis li div[data-progress="0"] {
+          visibility: hidden; }
         .progress-graph li .graph ul.axis li span, .timeline-page .timeline-list .card-body .sg-list li .graph ul.axis li span, .planning-page #strategic-goals-group .pc-list li .graph ul.axis li span {
           text-align: center;
           width: 100%;
@@ -394,7 +395,7 @@ body {
       width: 214px;
       margin-bottom: 20px; }
     .navbar .row .oneBySeven {
-      width: calc((100% / 7) * 1);
+      width: calc(95% / 7);
       float: left; }
     .navbar .row .fiveBySeven {
       width: calc((100% / 7) * 5);
@@ -823,8 +824,8 @@ body {
       padding-top: 20px; }
     .planning-page #strategic-goals-group .pc-list > li > .graph {
       margin-top: -20px; }
-      .planning-page #strategic-goals-group .pc-list > li > .graph > ul.axis > li::after {
-        margin-left: -6px; }
+      .planning-page #strategic-goals-group .pc-list > li > .graph > ul.axis > li .quater-name {
+        text-align: left !important; }
       .planning-page #strategic-goals-group .pc-list > li > .graph > ul.axis::after {
         content: attr(data-quater-name);
         position: absolute;
@@ -867,5 +868,82 @@ body {
           transform: scale(0.7); } }
     .anu-dash .card #risks {
       margin-top: 20px; }
+
+#pop-up-more-info {
+  position: absolute;
+  min-height: 120px;
+  width: 380px;
+  min-width: 380px;
+  border: 2px solid #9776e5;
+  z-index: 9999;
+  background-color: white;
+  border-radius: 7px;
+  padding: 12px;
+  box-shadow: 0 6px 21px rgba(0, 0, 0, 0.22);
+  font-size: 100%;
+  transition: display;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.5s;
+  display: none; }
+  #pop-up-more-info.small {
+    width: 240px; }
+  #pop-up-more-info.large {
+    width: 720px; }
+  #pop-up-more-info::before {
+    position: absolute;
+    content: ' ';
+    margin-left: 25px;
+    height: 59px;
+    width: 24px;
+    bottom: -31px;
+    transform: rotateX(5deg) rotateY(112deg) rotateZ(-73deg);
+    background-color: white;
+    border-bottom: 4px solid #9776e5;
+    border-left: 2px solid #9776e5; }
+  #pop-up-more-info.r-20::before {
+    right: 20px; }
+  #pop-up-more-info .close {
+    background-image: url("../images/close.svg");
+    background-position: center;
+    height: 14px;
+    width: 14px;
+    position: absolute;
+    right: 15px;
+    z-index: 9999; }
+  #pop-up-more-info .content-body {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: auto; }
+    #pop-up-more-info .content-body h5, #pop-up-more-info .content-body #strategic-plans-detailed-view .key-initiatives .initiatives h4, #strategic-plans-detailed-view .key-initiatives .initiatives #pop-up-more-info .content-body h4 {
+      font-weight: normal;
+      font-size: 75%;
+      color: grey; }
+    #pop-up-more-info .content-body p {
+      font-weight: bold;
+      font-size: 75%;
+      color: black; }
+    #pop-up-more-info .content-body table {
+      font-size: 75%; }
+      #pop-up-more-info .content-body table th, #pop-up-more-info .content-body table td {
+        border: 0;
+        padding: 5px; }
+      #pop-up-more-info .content-body table th {
+        color: grey;
+        font-weight: normal; }
+      #pop-up-more-info .content-body table td {
+        font-weight: bold;
+        color: black; }
+  #pop-up-more-info.timeline .content-body td {
+    font-size: 75%;
+    padding: 5px; }
+    #pop-up-more-info.timeline .content-body td:nth-child(odd) {
+      font-weight: normal;
+      font-size: 75%;
+      color: grey; }
+    #pop-up-more-info.timeline .content-body td:nth-child(even) {
+      font-weight: bold;
+      font-size: 75%;
+      color: black; }
 
 /*# sourceMappingURL=style.css.map */

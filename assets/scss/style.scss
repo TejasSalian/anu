@@ -102,7 +102,7 @@ body {
     }
 
     .oneBySeven {
-      width: calc((100% / 7) * 1);
+      width: calc(95% / 7);
       float: left;
     }
 
@@ -831,8 +831,8 @@ body {
           margin-top: -20px;
 
           & > ul.axis {
-            & > li::after {
-              margin-left: -6px;
+            & > li .quater-name {
+              text-align: left !important;
             }
 
             &::after {
@@ -894,6 +894,116 @@ body {
 
     #risks {
       margin-top: 20px;
+    }
+  }
+}
+
+#pop-up-more-info {
+  position: absolute;
+  min-height: 120px;
+  width: 380px;
+  min-width: 380px;
+  border: 2px solid #9776e5;
+  z-index: 9999;
+  background-color: white;
+  border-radius: 7px;
+  padding: 12px;
+  box-shadow: 0 6px 21px rgba(0, 0, 0, 0.22);
+  font-size: 100%;
+  transition: display;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.5s;
+  display: none;
+
+  &.small {
+    width: 240px;
+  }
+
+  &.large {
+    width: 720px;
+  }
+
+  &::before {
+    position: absolute;
+    content: ' ';
+    margin-left: 25px;
+    height: 59px;
+    width: 24px;
+    bottom: -31px;
+    transform: rotateX(5deg) rotateY(112deg) rotateZ(-73deg);
+    background-color: white;
+    border-bottom: 4px solid #9776e5;
+    border-left: 2px solid #9776e5;
+  }
+
+  &.r-20 {
+    &::before {
+      right: 20px;
+    }
+  }
+
+  .close {
+    background-image: url($img + 'close.svg');
+    background-position: center;
+    height: 14px;
+    width: 14px;
+    position: absolute;
+    right: 15px;
+    z-index: 9999;
+  }
+
+  .content-body {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: auto;
+
+    h5 {
+      font-weight: normal;
+      font-size: 75%;
+      color: grey;
+    }
+
+    p {
+      font-weight: bold;
+      font-size: 75%;
+      color: black;
+    }
+
+    table {
+      font-size: 75%;
+
+      th, td {
+        border: 0;
+        padding: 5px;
+      }
+      th{
+        color: grey;
+        font-weight: normal;
+      }
+      td{
+        font-weight: bold;
+        color: black
+      }
+    }
+  }
+
+  &.timeline .content-body {
+    td {
+      font-size: 75%;
+      padding: 5px;
+
+      &:nth-child(odd) {
+        font-weight: normal;
+        font-size: 75%;
+        color: grey;
+      }
+
+      &:nth-child(even) {
+        font-weight: bold;
+        font-size: 75%;
+        color: black;
+      }
     }
   }
 }

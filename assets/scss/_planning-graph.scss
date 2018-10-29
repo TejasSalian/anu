@@ -46,6 +46,7 @@
           height: 26px;
           padding: 0;
           border-bottom: 1px solid #abacad;
+          text-align: center;
 
           &::before {
             content: ' ';
@@ -59,14 +60,21 @@
             margin-top: 15px;
           }
 
-          &::after {
-            content: attr(data-quater-name);
-            position: absolute;
+          // &::after {
+          //   content: attr(data-quater-name);
+          //   position: absolute;
+          //   font-weight: bold;
+          //   height: 32px;
+          //   width: 50px;
+          //   margin-top: 32px;
+          //   margin-left: calc(7% - 34px);
+          // }
+
+          div.quater-name{
+            text-align: center;
+            width: 100%;
+            display: block;
             font-weight: bold;
-            height: 32px;
-            width: 50px;
-            margin-top: 32px;
-            margin-left: calc(7% - 34px);
           }
 
           div.diamond {
@@ -77,6 +85,7 @@
             transition-timing-function: ease-in-out;
             transition-duration: 0.5s;
             margin-left: calc(0% - 12px);
+            text-align: left;
 
             &::before {
               background-image: url($img +'diamond.svg');
@@ -90,6 +99,10 @@
               position: absolute;
               cursor: pointer;
             }
+          }
+
+          div[data-progress="0"]{
+            visibility: hidden;
           }
 
           span {

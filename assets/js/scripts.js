@@ -22,6 +22,7 @@ initiativesMoreDetails = $('.initiatives .details');
 initiativesList = $('.initiativesList');
 closeAnuOrgDetailView = $('#close-anu-org-detail-view');
 diamonds = $('.axis .diamond');
+popUpMoreInfoClose = $('#pop-up-more-info .close');
 
 // Funstions
 
@@ -65,6 +66,30 @@ closeAnuOrgDetailView.on('click', function() {
   }, 300);
 });
 
+diamonds.on('click', function() {
+  let loc = getOffset(this);
+  let popup = document.getElementById('pop-up-more-info');
+  // flash data to container Here
+  // flashPopUpData();
+  popup.classList.remove('r-20');
+  popup.style.display = 'block';
+  if (loc.left + popup.clientWidth >= window.innerWidth) {
+    popup.style.left = (loc.left - popup.clientWidth) + 50 + 'px';
+    popup.classList.add('r-20');
+  }else {
+    popup.style.left = (loc.left - 25) + 'px';
+  }
+  popup.style.top = (loc.top - popup.clientHeight - 25) + 'px';
+});
+
+popUpMoreInfoClose.on('click', function() {
+  let popup = document.getElementById('pop-up-more-info');
+  popup.style.display = 'none';
+  popup.classList.remove('r-20');
+  // document.querySelector('#pop-up-more-info .content-body').innerHTML = '';
+});
+
+// functions
 function buildDiamonds(event) {
   if (diamonds.length > 0) {
     $.each(diamonds, function(key, diamond) {
@@ -73,6 +98,20 @@ function buildDiamonds(event) {
       diamond.attr('style', 'margin-left : calc(' + Number(progress) + '% - 12px)');
     })
   }
+}
+
+function getOffset(el) {
+  let _x = 0;
+  let _y = 0;
+  while (el && !isNaN(el.offsetLeft) && !isNaN(el.offsetTop)) {
+    _x += el.offsetLeft - el.scrollLeft;
+    _y += el.offsetTop - el.scrollTop;
+    el = el.offsetParent;
+  }
+  return {
+    top: _y,
+    left: _x
+  };
 }
 
 // Document OnLoad and Parse
