@@ -1,30 +1,26 @@
 (function() {
 
   const data = [{
-      'name': 'Alert Goals',
+      'name': 'Alert',
       'value': '10',
       'color': '#F44336'
     },
     {
-      'name': 'Off-Track Goals',
+      'name': 'Off-Track',
       'value': '04',
       'color': '#FFC107'
     },
     {
-      'name': 'On-Track Goals',
+      'name': 'On-Track',
       'value': '40',
       'color': '#2196F3'
     },
     {
-      'name': 'Completed Goals',
+      'name': 'Completed',
       'value': '0',
       'color': '#009688'
     }
   ];
-
-  // d3.json("/data/employees.json", function(data) {
-  //   console.log(data[0]);
-  // });
 
   const title = 'NIG GOALS';
 
@@ -37,7 +33,6 @@
     top: 10,
     bottom: 10
   };
-  var totalValue = 0;
   const innerWidth = width - margin.left - margin.right;
   const innerHeight = height - margin.top - margin.bottom;
   const radius = (((innerHeight > innerWidth) ? innerWidth : innerHeight) / 2) - headingOffesetHeight;
@@ -111,8 +106,7 @@
     .append('text')
     .attr('dy', '.35em')
     .text(function(d) {
-      console.log(d.data.name);
-      return d.data.name;
+      return d.data.name + ' (' + d.value +') ';
     })
     .attr('transform', function(d) {
       let pos = outerArc.centroid(d);
@@ -149,17 +143,6 @@
     .attr('cy', radius)
     .attr('r', radius * 0.8)
     .attr('fill', '#fff');
-
-  var totalValue = 0;
-  pieChartTotalValue.append('text')
-    .attr('transform', '-20')
-    .data(pie(data))
-    .enter()
-    .text(function (d) {
-      totalValue += d.value;
-    })
-
-
 })();
 
 function midAngle(d) {

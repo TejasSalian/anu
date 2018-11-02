@@ -1,28 +1,20 @@
 (function() {
 
   const data = [{
-      'name': 'Within Tolerance',
-      'value': '56'
-    },
-    {
-      'name': 'Approaching Tolerance',
-      'value': '17'
-    },
-    {
-      'name': 'Exceeds Tolerance',
-      'value': '4'
-    },
-    {
       'name': 'Not Started',
-      'value': '15'
+      'value': '06'
     },
     {
-      'name': 'Completed',
-      'value': '28'
+      'name': 'Over Due',
+      'value': '0'
+    },
+    {
+      'name': 'Within Schedule',
+      'value': '02'
     }
   ];
 
-  const title = 'KEY INITIATIVES';
+  const title = 'SCHOOL REVIEWS TIMELINE';
 
   const width = 480;
   const height = 320;
@@ -38,7 +30,7 @@
   const innerHeight = height - margin.top - margin.bottom;
   const radius = (((innerHeight > innerWidth) ? innerWidth : innerHeight) / 2) - headingOffesetHeight;
 
-  const svgPointer = document.getElementById('key-initiatives').getElementsByTagName('svg')[0];
+  const svgPointer = document.getElementById('school-reviews').getElementsByTagName('svg')[0];
 
   const svg = d3.select(svgPointer)
     .attr('width', width)
@@ -119,8 +111,8 @@
     .text(infoName);
 
   pieChartTotalCountGroup.append('text')
-    .attr('y', 10)
-    .attr('x', -25)
+    .attr('y', 11)
+    .attr('x', -12)
     .style('font-size', '222%')
     .text(totalValue);
 })();
