@@ -93,10 +93,17 @@ popUpMoreInfoClose.on('click', function() {
 
 purpleSliderSwitch.on('click', function() {
   let target = purpleSliderSwitch.siblings()[0];
-  // at this stage target.checked will return previous state rather than current strategic
+  // at this stage target.checked will return previous state rather than current state
   strategicPlansSummaryCollapse.collapse('toggle');
-  // if (!target.checked) {
-  // }
+  if (!target.checked) {
+    // KPI
+    $('#strategic-goals-count').text('5');
+    $('#key-initiatives-count').text('26');
+  }else {
+    // KI
+    $('#strategic-goals-count').text('8');
+    $('#key-initiatives-count').text('31');
+  }
 });
 
 // functions
