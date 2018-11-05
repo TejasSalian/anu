@@ -43,9 +43,10 @@ function findMinMax(arr) {
   return [min, max];
 }
 
-(function() {
+(function keyInitiativesTimeline() {
 
-  const dataJSON = [{
+  const dataJSON = [
+    {
       'value': 20,
       'date': '2018-08-25'
     },
@@ -83,7 +84,7 @@ function findMinMax(arr) {
   // }
   //
   // getJSONP('http://127.0.0.1:8080/lineChart/data.json', function(data){
-  //     console.log(data);
+  //     // console.log(data);
   //    dataJSON = data;
   // });
 
@@ -150,7 +151,7 @@ function findMinMax(arr) {
 
   const title = 'KEY INITIATIVES TIMELINE';
 
-  const width = 680;
+  const width = document.getElementById('key-card').clientWidth + document.getElementById('key-card').clientWidth / 4;
   const height = 300;
   const headingOffesetHeight = 40;
   const margin = {
@@ -178,10 +179,6 @@ function findMinMax(arr) {
     .style('font-size', '150%')
     .attr('class', 'graphName')
     .text(title);
-
-  // let xScale = d3.scaleTime()
-  //   .domain([new Date(dataGrouped[0].key, 0, 1), new Date(dataGrouped[dataGrouped.length - 1].key, 12, 31)]) // input
-  //   .range([0, innerWidth - (margin.left * 4)]);
 
   let xScale = d3.scaleTime()
     .domain([new Date(dataGrouped[0].key, 00, 01), new Date(dataGrouped[dataGrouped.length - 1].key, 12, 31)]) // input

@@ -925,7 +925,8 @@ body {
       color: black; }
     #pop-up-more-info .content-body table {
       font-size: 75%; }
-      #pop-up-more-info .content-body table th, #pop-up-more-info .content-body table td {
+      #pop-up-more-info .content-body table td,
+      #pop-up-more-info .content-body table th {
         border: 0;
         padding: 5px; }
       #pop-up-more-info .content-body table th {
@@ -945,5 +946,8 @@ body {
       font-weight: bold;
       font-size: 75%;
       color: black; }
+
+#key-initiatives-timeline {
+  margin-left: -5%; }
 
 /*# sourceMappingURL=style.css.map */

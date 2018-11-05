@@ -1,6 +1,7 @@
-(function() {
+(function showRecommendations() {
 
-  const data = [{
+  const data = [
+    {
       'name': 'Within Tolerance',
       'value': '56',
       'color' : '#60e6e6'
@@ -26,10 +27,6 @@
       'color' : '#666'
     }
   ];
-
-  // d3.json("/data/employees.json", function(data) {
-  //   console.log(data[0]);
-  // });
 
   const title = 'RECOMMENDATIONS';
 
@@ -133,3 +130,52 @@
     .style('font-size', '222%')
     .text(totalValue);
 })();
+
+// function getJSONP(url, callback) {
+//     let xmlhttp = new XMLHttpRequest();
+//     xmlhttp.onreadystatechange = function() {
+//         if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+//             try {
+//                 let data = JSON.parse(xmlhttp.responseText);
+//             } catch(err) {
+//                 console.log(err.message + " in " + xmlhttp.responseText);
+//                 return;
+//             }
+//             callback(data);
+//         }
+//     };
+//
+//     xmlhttp.open("GET", url, true);
+//     xmlhttp.send();
+// }
+//
+// document.getElementById('recommendation-options')
+//         .addEventListener('change', getDataAndChangeRecommendation);
+//
+// function getDataAndChangeRecommendation() {
+//     let newValue = document.getElementById('recommendation-options').value;
+//     switch (newValue) {
+//       case expression:
+//         /*
+//         1. AJAX fetch data
+//             // getJSONP('http://127.0.0.1:8080/lineChart/data.json', function(data){
+//             //     // console.log(data);
+//             //    dataJSON = data;
+//             // });
+//         2. Clear SVG
+//             document.getElementById('recommendations').getElementsByTagName('svg')[0].innerHTML = '';
+//         3. Pass data to Graph Fn rebuild graph
+//           showRecommendations(dataJSON);
+//         */
+//       default:
+//       /*
+//       1. AJAX fetch data
+//           // getJSONP('default_url', function(data){
+//           //     // console.log(data);
+//           //    dataJSON = data;
+//           // });
+//       2. Pass data to Graph Fn rebuild graph
+//         showRecommendations(dataJSON);
+//       */
+//     }
+// }

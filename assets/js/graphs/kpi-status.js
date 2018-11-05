@@ -3,40 +3,110 @@
   const hexjson = {
     "layout": "odd-r",
     "hexes": {
-      "hex10":{"q":1,"r":0,"color":"#2ca02c"},
-      "hex11":{"q":2,"r":0,"color":"#2ca02c"},
-      "hex12":{"q":0,"r":1,"color":"#2ca02c"},
-      "hex31":{"q":1,"r":1,"color":"#2ca02c"},
-      "hex15":{"q":1,"r":2,"color":"#2ca02c"},
-      "hex16":{"q":2,"r":2,"color":"#2ca02c"},
-      "hex61":{"q":3,"r":0,"color":"#d62728"},
-      "hex17":{"q":2,"r":1,"color":"#d62728"},
-      "hex19":{"q":3,"r":1,"color":"#d62728"},
-      "hex79":{"q":4,"r":2,"color":"#d62728"},
-      "hex91":{"q":4,"r":1,"color":"#ffc107"},
-      "hex81":{"q":5,"r":0,"color":"#ffc107"}
-  },
-  "info": [
-    {
-      "name" : "Within Tolerance",
-      "value": 06,
-      "color": "#2ca02c"
+      "hex10": {
+        "q": 1,
+        "r": 0,
+        "color": "#2ca02c"
+      },
+      "hex11": {
+        "q": 2,
+        "r": 0,
+        "color": "#2ca02c"
+      },
+      "hex12": {
+        "q": 0,
+        "r": 1,
+        "color": "#2ca02c"
+      },
+      "hex31": {
+        "q": 1,
+        "r": 1,
+        "color": "#2ca02c"
+      },
+      "hex15": {
+        "q": 1,
+        "r": 2,
+        "color": "#2ca02c"
+      },
+      "hex16": {
+        "q": 2,
+        "r": 2,
+        "color": "#2ca02c"
+      },
+      "hex61": {
+        "q": 3,
+        "r": 0,
+        "color": "#d62728"
+      },
+      "hex17": {
+        "q": 2,
+        "r": 1,
+        "color": "#d62728"
+      },
+      "hex19": {
+        "q": 3,
+        "r": 1,
+        "color": "#d62728"
+      },
+      "hex79": {
+        "q": 4,
+        "r": 2,
+        "color": "#d62728"
+      },
+      "hex91": {
+        "q": 4,
+        "r": 1,
+        "color": "#ffc107"
+      },
+      "hex81": {
+        "q": 5,
+        "r": 0,
+        "color": "#ffc107"
+      }
     },
-    {
-      "name" : "Approching Tolerance",
-      "value": 02,
-      "color": "#ffc107"
-    },{
-      "name" : "Exceeds Tolerance",
-      "value": 02,
-      "color": "#d62728"
-    }
-  ]
-};
+    "info": [{
+        "name": "Within Tolerance",
+        "value": 06,
+        "color": "#2ca02c"
+      },
+      {
+        "name": "Approching Tolerance",
+        "value": 02,
+        "color": "#ffc107"
+      }, {
+        "name": "Exceeds Tolerance",
+        "value": 02,
+        "color": "#d62728"
+      }
+    ]
+  };
+
+  // function getJSONP(url, callback) {
+  //     var xmlhttp = new XMLHttpRequest();
+  //     xmlhttp.onreadystatechange = function() {
+  //         if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+  //             try {
+  //                 var data = JSON.parse(xmlhttp.responseText);
+  //             } catch(err) {
+  //                 console.log(err.message + " in " + xmlhttp.responseText);
+  //                 return;
+  //             }
+  //             callback(data);
+  //         }
+  //     };
+  //
+  //     xmlhttp.open("GET", url, true);
+  //     xmlhttp.send();
+  // }
+  //
+  // getJSONP('http://127.0.0.1:8080/lineChart/data.json', function(data){
+  //     // console.log(data);
+  //    dataJSON = data;
+  // });
 
   const title = 'KPI STATUS';
 
-  const width = 480;
+  const width = 520;
   const height = 300;
   const headingOffesetHeight = 40;
   const margin = {
@@ -62,11 +132,10 @@
     .attr('transform', 'translate(' + (margin.left) + ',' + ((margin.top * 6) + headingOffesetHeight) + ')');
 
   const hexChart = hexGroup.append('g')
-    .attr("class", "hex-chart")
-    .style('transform', 'scale(0.5)');
+    .attr("class", "hex-chart");
 
   const hexChartInfoGroup = svg.append('g').attr("class", "info-group")
-    .attr('transform', 'translate(' + (margin.left * 2) + ',' + (margin.top * 4.5) + ')');
+    .attr('transform', 'translate(' + (margin.left * 6) + ',' + (margin.top * 4.5) + ')');
 
   titleGroup.append('text').attr('class', 'legend-label')
     .attr('x', margin.left)
@@ -77,9 +146,9 @@
 
   let grid = d3.getGridForHexJSON(hexjson);
   hHeight = innerHeight - (margin.bottom * 2);
-  let gridHexes = d3.renderHexJSON(grid, innerWidth, hHeight);
 
-  let hexes = d3.renderHexJSON(hexjson, innerWidth, hHeight);
+  let gridHexes = d3.renderHexJSON(grid, innerWidth/2, hHeight/2);
+  let hexes = d3.renderHexJSON(hexjson, innerWidth/2, hHeight/2);
 
   let hexgrid = hexChart.selectAll("g.grid")
     .data(gridHexes)
@@ -145,7 +214,7 @@
     .attr('y', function(d, i) {
       return margin.top + (headingOffesetHeight * 1.5) + (i * 35) + 5;
     })
-    .attr('x', (margin.left * 1) + (innerHeight  /2) + 95)
+    .attr('x', (margin.left * 1) + (innerHeight / 2) + 95)
     .text(infoName);
 
   hexChartInfoGroup.append('text')

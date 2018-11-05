@@ -1,7 +1,8 @@
 (function() {
 
   const title = 'RISKS';
-  const data = [{
+  const data = [
+    {
       'name': 'Extreme Risk',
       'value': '0',
       'color': '#fd3f3f'
@@ -27,6 +28,29 @@
       'color': '#4CAF50'
     }
   ];
+
+  // function getJSONP(url, callback) {
+  //     var xmlhttp = new XMLHttpRequest();
+  //     xmlhttp.onreadystatechange = function() {
+  //         if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+  //             try {
+  //                 var data = JSON.parse(xmlhttp.responseText);
+  //             } catch(err) {
+  //                 console.log(err.message + " in " + xmlhttp.responseText);
+  //                 return;
+  //             }
+  //             callback(data);
+  //         }
+  //     };
+  //
+  //     xmlhttp.open("GET", url, true);
+  //     xmlhttp.send();
+  // }
+  //
+  // getJSONP('http://127.0.0.1:8080/lineChart/data.json', function(data){
+  //     // console.log(data);
+  //    dataJSON = data;
+  // });
 
   const width = 480;
   const height = 280;

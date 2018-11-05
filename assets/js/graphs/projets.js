@@ -22,10 +22,6 @@
     }
   ];
 
-  // d3.json("/data/employees.json", function(data) {
-  //   console.log(data[0]);
-  // });
-
   const title = 'PROJECTS';
 
   const width = 480;
@@ -139,3 +135,52 @@
     .text(totalValue);
 
 })();
+
+// function getJSONP(url, callback) {
+//     let xmlhttp = new XMLHttpRequest();
+//     xmlhttp.onreadystatechange = function() {
+//         if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+//             try {
+//                 let data = JSON.parse(xmlhttp.responseText);
+//             } catch(err) {
+//                 console.log(err.message + " in " + xmlhttp.responseText);
+//                 return;
+//             }
+//             callback(data);
+//         }
+//     };
+//
+//     xmlhttp.open("GET", url, true);
+//     xmlhttp.send();
+// }
+//
+// document.getElementById('projects-options')
+//         .addEventListener('change', getDataAndChangeRecommendation);
+//
+// function getDataAndChangeRecommendation() {
+//     let newValue = document.getElementById('recommendation-options').value;
+//     switch (newValue) {
+//       case expression:
+//         /*
+//         1. AJAX fetch data
+//             // getJSONP('http://127.0.0.1:8080/lineChart/data.json', function(data){
+//             //     // console.log(data);
+//             //    dataJSON = data;
+//             // });
+//         2. Clear SVG
+//             document.getElementById('projects').getElementsByTagName('svg')[0].innerHTML = '';
+//         3. Pass data to Graph Fn rebuild graph
+//           showRecommendations(dataJSON);
+//         */
+//       default:
+//       /*
+//       1. AJAX fetch data
+//           // getJSONP('default_url', function(data){
+//           //     // console.log(data);
+//           //    dataJSON = data;
+//           // });
+//       2. Pass data to Graph Fn rebuild graph
+//         showRecommendations(dataJSON);
+//       */
+//     }
+// }

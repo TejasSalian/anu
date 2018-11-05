@@ -81,6 +81,29 @@
     ]
   };
 
+  // function getJSONP(url, callback) {
+  //     var xmlhttp = new XMLHttpRequest();
+  //     xmlhttp.onreadystatechange = function() {
+  //         if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+  //             try {
+  //                 var data = JSON.parse(xmlhttp.responseText);
+  //             } catch(err) {
+  //                 console.log(err.message + " in " + xmlhttp.responseText);
+  //                 return;
+  //             }
+  //             callback(data);
+  //         }
+  //     };
+  //
+  //     xmlhttp.open("GET", url, true);
+  //     xmlhttp.send();
+  // }
+  //
+  // getJSONP('http://127.0.0.1:8080/lineChart/data.json', function(data){
+  //     // console.log(data);
+  //    dataJSON = data;
+  // });
+
   const title = 'KPI STATUS OVERVIEW';
 
   const width = document.getElementsByClassName('graphs')[0].clientWidth;
@@ -101,11 +124,6 @@
     .attr('width', width)
     .attr('height', height);
 
-  //
-  // const styleDef = '<defs><style>.clip-path{fill:none;}.hex-chart>g{clip-path:url(#clip-path);}.hexgone-name{fill:#ed1c24;}</style><clipPath id="clip-path" transform="translate(-109.74 -63.58)"><path class="clip-path" d="M209.86,2.41l-1.08-.62L.31,362.87l1.08.62L0,365.9,425.44,611.52l5.39,3.12.24.13,2.32-4-.24-.14L457,569.4l2.31-4,23.8-41.23,2.32-4,23.8-41.22,2.32-4,23.8-41.23,2.31-4,23.8-41.22,2.32-4,23.8-41.23,2.32-4L613.65,298l2.31-4,23.34-40.43-5.39-3.11-23.34,40.42L189.44,47.72,213.24,6.5,640,252.89l2.32-4L211.25,0Zm217.9,605.1L6.63,364.37l23.8-41.22L451.56,566.29Zm26.11-45.23L32.74,319.14l23.8-41.23L477.67,521.05ZM480,517,58.86,273.9l23.8-41.22L503.79,475.82Zm26.12-45.23L85,228.67l23.8-41.23L529.91,430.58Zm26.11-45.24L111.09,183.43l23.8-41.22L556,385.35Zm26.12-45.24L137.21,138.2,161,97,582.14,340.11Zm49.92-86.45-23.8,41.22L163.33,93l23.8-41.22Z"/></clipPath></defs>';
-  //
-  // svgPointer.innerHTML = styleDef;
-
   const titleGroup = svg.append('g').attr("class", "title-group")
     .attr('transform', 'translate(' + margin.left + ',' + (margin.top * 2) + ')');
 
@@ -114,8 +132,7 @@
     .attr('transform', 'translate(' + (margin.left) + ',' + ((margin.top * 6) + headingOffesetHeight) + ')');
 
   const hexChart = hexGroup.append('g')
-    .attr("class", "hex-chart")
-    .style('transform', 'scale(0.5)');
+    .attr("class", "hex-chart");
 
   const hexChartInfoGroup = svg.append('g').attr("class", "info-group")
     .attr('transform', 'translate(' + (innerWidth / 3) + ',' + (margin.top * 5.5) + ')');
@@ -130,9 +147,9 @@
 
   let grid = d3.getGridForHexJSON(hexjson);
   hHeight = innerHeight - (margin.bottom * 2);
-  let gridHexes = d3.renderHexJSON(grid, innerWidth, hHeight);
+  let gridHexes = d3.renderHexJSON(grid, innerWidth/2, hHeight/2);
 
-  let hexes = d3.renderHexJSON(hexjson, innerWidth, hHeight);
+  let hexes = d3.renderHexJSON(hexjson, innerWidth/2, hHeight/2);
 
   let hexgrid = hexChart.selectAll("g.grid")
     .data(gridHexes)
