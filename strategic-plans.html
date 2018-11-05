@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="./assets/css/font-awesome-all.css">
   <link rel="stylesheet" href="./assets/css/animate.css">
   <link rel="stylesheet" href="./assets/css/style.css">
+  <script src="https://d3js.org/d3.v5.min.js"></script>
 
   <title>Strategic Plans - Australian National University</title>
 </head>
@@ -67,7 +68,26 @@
         </div>
       </div>
       <div class="col-12 mt-3 mb-3">
-        Graph Here
+        <script src="./assets/js/graphs/hex/d3-hexjson.js"></script>
+        <script src="./assets/js/graphs/hex/d3-hexjson.min.js"></script>
+        <div class="row">
+          <div class="col-12 graphs">
+            <div class="collapse multi-collapse show" id="ki-overview-container">
+              <div class="graph-body">
+                <div id="ki-overview"><svg></svg></div>
+                <script src="./assets/js/graphs/ki-overview.js"></script>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 graphs">
+            <div class="collapse multi-collapse" id="kpi-overview-container">
+              <div class="graph-body">
+                <div id="kpi-overview"><svg></svg></div>
+                <script src="./assets/js/graphs/kpi-overview.js"></script>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <div class="row strategic-goals">

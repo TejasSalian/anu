@@ -23,6 +23,8 @@ initiativesList = $('.initiativesList');
 closeAnuOrgDetailView = $('#close-anu-org-detail-view');
 diamonds = $('.axis .diamond');
 popUpMoreInfoClose = $('#pop-up-more-info .close');
+purpleSliderSwitch = $('.switch-purple .slider');
+strategicPlansSummaryCollapse = $('.strategic-plans-summary .collapse');
 
 // Funstions
 
@@ -76,7 +78,7 @@ diamonds.on('click', function() {
   if (loc.left + popup.clientWidth >= window.innerWidth) {
     popup.style.left = (loc.left - popup.clientWidth) + 50 + 'px';
     popup.classList.add('r-20');
-  }else {
+  } else {
     popup.style.left = (loc.left - 25) + 'px';
   }
   popup.style.top = (loc.top - popup.clientHeight - 25) + 'px';
@@ -87,6 +89,14 @@ popUpMoreInfoClose.on('click', function() {
   popup.style.display = 'none';
   popup.classList.remove('r-20');
   // document.querySelector('#pop-up-more-info .content-body').innerHTML = '';
+});
+
+purpleSliderSwitch.on('click', function() {
+  let target = purpleSliderSwitch.siblings()[0];
+  // at this stage target.checked will return previous state rather than current strategic
+  strategicPlansSummaryCollapse.collapse('toggle');
+  // if (!target.checked) {
+  // }
 });
 
 // functions
@@ -100,13 +110,13 @@ function buildDiamonds(event) {
   }
 }
 
-function getOffset(el) {
+function getOffset(element) {
   let _x = 0;
   let _y = 0;
-  while (el && !isNaN(el.offsetLeft) && !isNaN(el.offsetTop)) {
-    _x += el.offsetLeft - el.scrollLeft;
-    _y += el.offsetTop - el.scrollTop;
-    el = el.offsetParent;
+  while (element && !isNaN(element.offsetLeft) && !isNaN(element.offsetTop)) {
+    _x += element.offsetLeft - element.scrollLeft;
+    _y += element.offsetTop - element.scrollTop;
+    element = element.offsetParent;
   }
   return {
     top: _y,
