@@ -124,13 +124,16 @@
     })
     .style('fill', 'none');
 
+  let totalValue = 0;
+
   labels.selectAll('text')
     .data(pie(data))
     .enter()
     .append('text')
     .attr('dy', '.35em')
     .text(function(d) {
-      return d.data.name + ' (' + d.value +') ';
+      totalValue += Number(d.value);
+      return d.data.name + ' (' + d.value + ') ';
     })
     .attr('transform', function(d) {
       let pos = outerArc.centroid(d);
@@ -167,6 +170,12 @@
     .attr('cy', radius)
     .attr('r', radius * 0.8)
     .attr('fill', '#fff');
+
+  pieChartArcGroupBackground.append('text')
+    .attr('y', (innerHeight / 3) + margin.top + margin.bottom)
+    .attr('x', (innerWidth / 5) - margin.left )
+    .style('font-size', '222%')
+    .text(totalValue);
 })();
 
 function midAngle(d) {
